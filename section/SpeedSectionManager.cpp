@@ -9,8 +9,7 @@ SpeedSectionManager::SpeedSectionManager()
 #else
       const int _EDGE = LineTracer::LEFTEDGE;
 #endif
-//0
-    Section *sc0 = new Section();
+    Section *sc = new Section();
     
     // LineTracer テスト
     LineTracer* tracer0 = (LineTracer*)sc0->selectWalker(Section::TRACER);
@@ -71,6 +70,10 @@ SpeedSectionManager::SpeedSectionManager()
     //距離目安　tracer5->setLength(28);
     addSection(sc5);
 
+    //PID
+    tracer->setParam(25, 0 ,  30, 0.2, 0.1 );
+    tracer->setEdgeMode(_EDGE);
+    addSection(sc);
     /*
     // SimpleWalkerテスト
     SimpleWalker* walker = (SimpleWalker*)sc->selectWalker(Section::WALKER);
