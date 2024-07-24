@@ -34,7 +34,6 @@ private:
 	Length *mLength;
 	TurnAngle *mTurnAngle;
 	Velocity *mVelocity;
-	Length *mLength;
 
 	int32_t current_rs1;
 	int32_t current_rs2;
