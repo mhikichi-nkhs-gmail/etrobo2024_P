@@ -1,5 +1,6 @@
 #include "Walker.h"
 
+//コンストラクタ
 Walker::Walker( Odometry *odo):
     mOdo(odo)
 {

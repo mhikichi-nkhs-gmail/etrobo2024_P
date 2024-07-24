@@ -138,3 +138,5 @@ void LineTracer::printInfo()
 {
     msg_log("LineTracer");
 }
+
+//ばやしこ

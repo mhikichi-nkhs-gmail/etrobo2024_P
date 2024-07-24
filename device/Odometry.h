@@ -9,6 +9,8 @@
 #include "TurnAngle.h"
 #include "Velocity.h"
 
+extern Length *gLength;
+
 using namespace ev3api;
 
 class Odometry
@@ -32,6 +34,7 @@ private:
 	Length *mLength;
 	TurnAngle *mTurnAngle;
 	Velocity *mVelocity;
+	Length *mLength;
 
 	int32_t current_rs1;
 	int32_t current_rs2;

@@ -5,15 +5,16 @@ SpeedSectionManager::SpeedSectionManager()
 {
     // test用初期化
  #if defined(MAKE_RIGHT)
-      const int _EDGE = LineTracer::LEFTEDGE;
-#else
       const int _EDGE = LineTracer::RIGHTEDGE;
+#else
+      const int _EDGE = LineTracer::LEFTEDGE;
 #endif
     Section *sc = new Section();
     
     // LineTracer テスト
     LineTracer* tracer = (LineTracer*)sc->selectWalker(Section::TRACER);
 
+    //PID
     tracer->setParam(25, 0 ,  30, 0.2, 0.1 );
     tracer->setEdgeMode(_EDGE);
 

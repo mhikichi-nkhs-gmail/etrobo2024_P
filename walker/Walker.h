@@ -10,6 +10,7 @@ extern Brightness *gBrightness;
 class Walker
 {
     public:
+        //コンストラクタの宣言
         Walker( Odometry *odo );
 
         virtual void run();
