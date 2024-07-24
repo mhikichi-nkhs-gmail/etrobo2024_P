@@ -43,10 +43,13 @@ Walker *Section::selectWalker(int no)
     return mWalker;
 }
 
-/*
 Judge *Section::selectJudge(int no)
 {
-    mJudge = judge;
+   switch(no) {
+        case LENGTH:
+            mjudge = (Judge*)(new Len_judge());
+            break;
+        default:
+            msg_log("selectJudge error!!");
+   }
 }
-*/
-
