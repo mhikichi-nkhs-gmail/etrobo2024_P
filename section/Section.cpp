@@ -19,7 +19,7 @@ Section::~Section()
 bool Section::run()
 {
     //判定
-
+    
 
     //走法
     mWalker->run();

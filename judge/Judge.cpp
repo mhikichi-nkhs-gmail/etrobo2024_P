@@ -1,21 +1,28 @@
 #include "Judge.h"
 
-boolean::judge()
+
+
+Judge::Judge()
+{
+    mLength = gLength;
+}
+
+bool Judge::judge()
+{
+    return false;
+}
+
+void Judge::set(double param[])
 {
     
 }
 
-void::set()
+void Judge::reset()
 {
     
 }
 
-void::reset()
-{
-    
-}
-
-boolean::calc_judge()
+bool Judge::calc_judge()
 {
 
 }

@@ -18,6 +18,7 @@ SectionManager::~SectionManager()
 
 bool SectionManager::run()
 {
+    
     return true;
 }
 

@@ -1,17 +1,23 @@
 #ifndef JUDGE_H_
 #define JUDGE_H_
 
-#include "section"
+#include "Length.h"
 
-class judge
+extern Length *gLength;
+
+
+class Judge
 {
     public:
-        boolean judge()
-        void set()
-        void reset()
+        Judge();
+        bool judge();
+        void set(double param[]);
+        void reset();
     protected:
-        boolean  calc_judge()
+        bool  calc_judge();
+        
     private:
-
+        Length *mLength;
+    
 };
 #endif
