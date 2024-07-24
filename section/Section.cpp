@@ -1,4 +1,7 @@
 #include "Section.h"
+#include "Len_judge.h"
+#include "SimpleWalker.h"
+
  
 extern SimpleWalker *gWalker;
 extern LineTracer *gTracer;
@@ -47,7 +50,7 @@ Judge *Section::selectJudge(int no)
 {
    switch(no) {
         case LENGTH:
-            mjudge = (Judge*)(new Len_judge());
+            mJudge = (Judge*)(new Len_judge());
             break;
         default:
             msg_log("selectJudge error!!");

@@ -7,14 +7,14 @@ boolean Len_judge::judge()
 {
     double len = mLength->getValue();
     
-    if()
+   /*if()
     {
         return 
     }
     else
     {
         
-    }
+    }*/
 }
 
 void Len_judge::set()

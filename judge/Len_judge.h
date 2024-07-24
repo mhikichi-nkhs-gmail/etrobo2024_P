@@ -2,18 +2,19 @@
 #define LEN_JUDGE_H_
 
 #include "Odometry.h"
+//#include "Length.h"
 #include "Judge.h"
 
 
-class lenJudge : public Judge
+class Len_judge : public Judge
 {
     public:
-        boolean judge();
+        bool judge();
         void set();
 
     protected:   
 
         double Length;
-        boolean direction;
-        Length *mlegth;
+        bool direction;
+        Length *mlength;
 }
