@@ -5,9 +5,9 @@ SpeedSectionManager::SpeedSectionManager()
 {
     // test用初期化
  #if defined(MAKE_RIGHT)
-      const int _EDGE = LineTracer::LEFTEDGE;
-#else
       const int _EDGE = LineTracer::RIGHTEDGE;
+#else
+      const int _EDGE = LineTracer::LEFTEDGE;
 #endif
 //0
     Section *sc0 = new Section();

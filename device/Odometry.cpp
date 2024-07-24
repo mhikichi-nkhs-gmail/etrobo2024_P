@@ -19,11 +19,13 @@ Odometry::Odometry(Motor *left, Motor *right,
 {
 	mLeftMotor->reset();
 	mRightMotor->reset();
+	mLength = gLength;
 
 	x=y=th=0.0;
 	sumlen=0;
 	prev_rs1=current_rs1=0;
 	prev_rs2=current_rs2=0;
+	
 }
 
 
@@ -79,6 +81,8 @@ void Odometry::calc()
 
 	th+=dth; // 左旋回＋、右旋回-
 	sumlen += (len_r+len_l)/2.0;
+
+	
 
 	mLength->update(sumlen);
 	mTurnAngle->update(th);

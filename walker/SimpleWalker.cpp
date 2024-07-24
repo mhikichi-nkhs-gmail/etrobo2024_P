@@ -38,6 +38,7 @@ void SimpleWalker::run() {
 
     float pwm_l = mForward + mTurn;      // <2>
     float pwm_r = mForward - mTurn;      // <2>
+    //モーター
     static const int MAXPWM=85;
     int diff = 0;
     if(pwm_l>MAXPWM) {
