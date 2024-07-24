@@ -77,7 +77,7 @@ SpeedSectionManager::SpeedSectionManager()
 bool SpeedSectionManager::run()
 {
     if(mSection[mSectionIdx]->run())
-        return true;
+        mSectionIdx++;
 
     return false;
 }
