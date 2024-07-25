@@ -7,17 +7,17 @@ boolean Len_judge::judge()
 {
     double len = mLength->getValue();
     
-   /*if()
+   if(len > slen)
     {
-        return 
+        return true;
     }
     else
     {
-        
-    }*/
+        return false;
+    }
 }
 
-void Len_judge::setLength(int setLen)
+void Len_judge::setLength(double setLen)
 {
     slen = setLen;
 }

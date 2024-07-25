@@ -11,6 +11,8 @@ class Len_judge : public Judge
     public:
         bool judge();
         void setLength(int setLen);
+        double setLen;
+        double slen;
 
     protected:   
 
