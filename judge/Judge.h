@@ -3,6 +3,8 @@
 
 #include "Length.h"
 
+#include "ev3api.h"
+
 extern Length *gLength;
 
 
@@ -10,7 +12,7 @@ class Judge
 {
     public:
         Judge();
-        bool judge();
+        virtual bool judge();
         void set(double param[]);
         void reset();
     protected:

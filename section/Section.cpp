@@ -21,8 +21,8 @@ Section::~Section()
 bool Section::run()
 {
     //判定
-    if()
-    return true
+    if(mJudge->judge())
+    return true;
 
     //走法
     mWalker->run();
