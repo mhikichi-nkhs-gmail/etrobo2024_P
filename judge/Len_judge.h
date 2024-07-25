@@ -2,7 +2,7 @@
 #define LEN_JUDGE_H_
 
 #include "Odometry.h"
-//#include "Length.h"
+#include "Length.h"
 #include "Judge.h"
 
 
