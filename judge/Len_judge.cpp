@@ -17,7 +17,7 @@ boolean Len_judge::judge()
     }*/
 }
 
-void Len_judge::set()
+void Len_judge::setLength()
 {
     
 }
