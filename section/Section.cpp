@@ -21,7 +21,8 @@ Section::~Section()
 bool Section::run()
 {
     //判定
-    
+    if()
+    return true
 
     //走法
     mWalker->run();

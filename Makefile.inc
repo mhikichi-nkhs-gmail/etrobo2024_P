@@ -24,7 +24,8 @@ APPL_CXXOBJS += \
 	Section.o \
 	SectionManager.o \
 	SpeedSectionManager.o \
-	Judge.o
+	Judge.o\
+	Len_judge.o
 
 SRCLANG := c++
 

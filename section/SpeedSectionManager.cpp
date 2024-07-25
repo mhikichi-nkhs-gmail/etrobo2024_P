@@ -1,6 +1,6 @@
 #include "SpeedSectionManager.h"
 #include "Section.h"
-#include "Judge.h"
+#include "Len_judge.h"
 
 SpeedSectionManager::SpeedSectionManager()
 {
@@ -14,7 +14,7 @@ SpeedSectionManager::SpeedSectionManager()
     
     // LineTracer テスト
     LineTracer* tracer0 = (LineTracer*)sc0->selectWalker(Section::TRACER);
-    Judge* judge0 = (Judge*)sc0->selectJudge(Section::LENGTH);
+    Len_judge* judge0 =(Len_judge*)sc0->selectJudge(Section::LENGTH);
 
     tracer0->setParam(85, 0 ,  30, 0.2, 0.1 );
     tracer0->setEdgeMode(_EDGE);
@@ -27,7 +27,7 @@ SpeedSectionManager::SpeedSectionManager()
     // LineTracer テスト
     LineTracer* tracer1 = (LineTracer*)sc1->selectWalker(Section::TRACER);
 
-    tracer1->setParam(50, 0 ,  30, 0.2, 0.1 );
+    tracer1->setParam(0, 0 ,  30, 0.2, 0.1 );
     tracer1->setEdgeMode(_EDGE);
     //距離目安　tracer1->setLength(20);
     addSection(sc1);

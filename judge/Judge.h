@@ -15,8 +15,6 @@ class Judge
         void reset();
     protected:
         bool  calc_judge();
-        
-    private:
         Length *mLength;
     
 };
