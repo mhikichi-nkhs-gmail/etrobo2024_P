@@ -1,8 +1,7 @@
 #include "Section.h"
 #include "Len_judge.h"
-#include "SimpleWalker.h"
 
- 
+
 extern SimpleWalker *gWalker;
 extern LineTracer *gTracer;
 extern Odometry *gOdo;

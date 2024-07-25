@@ -16,5 +16,6 @@ class Len_judge : public Judge
 
         double Length;
         bool direction;
-        Length *mlength;
-}
+};
+
+#endif
