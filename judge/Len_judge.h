@@ -10,7 +10,7 @@ class Len_judge : public Judge
 {
     public:
         bool judge();
-        void set();
+        void setLength();
 
     protected:   
 
