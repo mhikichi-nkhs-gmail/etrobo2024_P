@@ -54,4 +54,5 @@ Judge *Section::selectJudge(int no)
         default:
             msg_log("selectJudge error!!");
    }
+   return mJudge;
 }
