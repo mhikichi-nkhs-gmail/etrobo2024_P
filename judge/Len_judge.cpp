@@ -17,7 +17,7 @@ boolean Len_judge::judge()
     }*/
 }
 
-void Len_judge::setLength()
+void Len_judge::setLength(int setLen)
 {
-    
+    slen = setLen;
 }
