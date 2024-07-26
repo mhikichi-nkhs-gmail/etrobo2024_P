@@ -10,6 +10,8 @@ class blue_judge : public Judge
 {
     public:
         bool judge();
+        void setBlue();
+        double sblue;
 };
 
 #endif
