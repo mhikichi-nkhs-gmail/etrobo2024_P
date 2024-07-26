@@ -6,6 +6,7 @@ Scene::Scene():
     mState(UNDEFINED)
 {
     mSsm = new SpeedSectionManager();
+    mWsm = new WloopSectionManager();
 }
 
 bool Scene::run()
@@ -20,8 +21,8 @@ bool Scene::run()
         case SPEED:
             execSpeed();
             break;
-        case BINGO:
-            execBingo();
+        case WLOOP:
+            execWloop();
             break;
         case GARAGE:
             execGarage();
@@ -51,12 +52,16 @@ void Scene::execSpeed()
 {
     if(mSsm->run()) {
         delete mSsm;
-        mState = END;
+        mState = WLOOP;
     }
 }
-void Scene::execBingo()
+void Scene::execWloop()
 {
-
+    //青色を感知した際に実行するところ
+    if(mWsm->run()) {
+        delete mWsm;
+        mState = END;
+    }
 }
 void Scene::execGarage()
 {

@@ -2,10 +2,14 @@
 #define JUDGE_H_
 
 #include "Length.h"
+#include "HsvHue.h"
+#include "HsvSatu.h"
 
 #include "ev3api.h"
 
 extern Length *gLength;
+extern HsvHue *gHue;
+extern HsvSatu *gSatu;
 
 
 class Judge
@@ -18,6 +22,8 @@ class Judge
     protected:
         bool  calc_judge();
         Length *mLength;
+        HsvHue *mHue;
+        HsvSatu *mSatu;
     
 };
 #endif

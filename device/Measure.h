@@ -13,7 +13,7 @@ class Measure
             LowPassFilter *mLpf;
 
     private:
-
+    
 };
 
 #endif

@@ -22,7 +22,8 @@ class Section {
         };
 
         enum JUDGE_NO{
-            LENGTH
+            LENGTH,
+            BLUE
         };
 
     protected:
