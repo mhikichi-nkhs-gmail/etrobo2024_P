@@ -59,6 +59,7 @@ void Scene::execWloop()
 {
     //青色を感知した際に実行するところ
     if(mWsm->run()) {
+        
         delete mWsm;
         mState = END;
     }

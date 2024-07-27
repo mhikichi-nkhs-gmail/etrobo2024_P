@@ -9,12 +9,14 @@ class Blue_judge : public Judge
 {
     public:
         bool judge();
-        void setBlueH(double setblue1);
-        void setBlueS(double setblue2);
-        double sblue1;
-        double sblue2;
-        double setblue1;
-        double setblue2;
+        void setBlueH(double maxblue,double minblue);
+        void setBlueS(double maxblue,double minblue);
+        double sblueh1;
+        double sblueh2;
+        double sblues1;
+        double sblues2;
+        double maxblue;
+        double minblue;
     protected:
 
         double Blue;

@@ -19,9 +19,11 @@ WloopSectionManager::WloopSectionManager()
     
     tracer0->setParam(100,0,10,5,5);
     tracer0->setEdgeMode(_EDGE);
-    blue0->setBlueH(180);
-    blue0->setBlueS(50);
+    blue0->setBlueH(204,215);
+    blue0->setBlueS(0.75,0.90);
     addSection(sc0);
+
+    
 
     
 }

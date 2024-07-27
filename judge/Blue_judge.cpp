@@ -6,26 +6,26 @@ bool Blue_judge::judge()
     double blue1 = mHue->getValue();
     double blue2 = mSatu->getValue();
 
-    if((blue1 > sblue1) && (blue2 > sblue2))
+    if(((blue1 >= sblueh1) && (blue1 <= sblueh2)) && ((blue2 >= sblues1) && (blue2 <= sblues2)))
     {
-        printf("あああ");
         return true;
     }
     else
     {
-        printf("いいい");
         return false;
     }
 }
 
-void Blue_judge::setBlueH(double setblue1)
+void Blue_judge::setBlueH(double maxblue,double minblue)
 {
-    sblue1 = setblue1;
-    printf("ううう");
+    sblueh1 = maxblue;
+    sblueh2 = minblue;
+    //printf("ううう");
 }
 
-void Blue_judge::setBlueS(double setblue2)
+void Blue_judge::setBlueS(double maxblue,double minblue)
 {
-    sblue2 =setblue2;
-    printf("えええ");
+    sblues1 = maxblue;
+    sblues2 = minblue;
+    //printf("えええ");
 }
