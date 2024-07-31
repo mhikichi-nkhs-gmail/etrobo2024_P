@@ -5,8 +5,9 @@ Measure::Measure()
     mLpf = new LowPassFilter();
 }
 
-float Measure::getValue()
+double Measure::getValue()
 {
     return 0;
 }
+
 

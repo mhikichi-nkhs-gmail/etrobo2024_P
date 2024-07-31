@@ -8,6 +8,9 @@
 #include "Length.h"
 #include "TurnAngle.h"
 #include "Velocity.h"
+#include "Measure.h"
+#include "X_Position.h"
+#include "Y_Position.h"
 
 extern Length *gLength;
 
@@ -20,7 +23,9 @@ public:
 			Motor *right,
 			Length *len,
 			TurnAngle *angle,
-			Velocity *velo);
+			Velocity *velo,
+			X_Position *gX,
+			Y_Position *gY);
 	void update();
 	void calc();
 	void reset();
@@ -34,6 +39,8 @@ private:
 	Length *mLength;
 	TurnAngle *mTurnAngle;
 	Velocity *mVelocity;
+	X_Position *mX_odo;
+	Y_Position *mY_odo;
 
 	int32_t current_rs1;
 	int32_t current_rs2;
@@ -54,7 +61,6 @@ private:
 	double sumy;
 	double sumth;
 	double sumlen;
-
 
 };
 

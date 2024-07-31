@@ -6,7 +6,7 @@ TurnAngle::TurnAngle()
 {
 }
 
-float TurnAngle::getValue()
+double TurnAngle::getValue()
 {
     return mAngleDeg?mAngle*180/M_PI:mAngle;
 }

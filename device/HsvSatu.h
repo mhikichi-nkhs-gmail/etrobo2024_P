@@ -6,7 +6,7 @@ class HsvSatu : public Measure
 {
     public:
         HsvSatu();
-        float getValue();
+        double getValue();
         void update(float h);
 
     private:

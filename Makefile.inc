@@ -25,7 +25,11 @@ APPL_CXXOBJS += \
 	SectionManager.o \
 	SpeedSectionManager.o \
 	Judge.o\
-	Len_judge.o
+	Len_judge.o \
+	CurveVirtual.o \
+	X_Position.o \
+	Y_Position.o
+
 
 SRCLANG := c++
 
@@ -36,7 +40,7 @@ include $(EV3RT_SDK_LIB_DIR)/libcpp-ev3/Makefile
 
 endif
 
-APPL_DIRS += $(mkfile_path)app $(mkfile_path)unit  $(mkfile_path)device $(mkfile_path)walker $(mkfile_path)section $(mkfile_path)judge 
+APPL_DIRS += $(mkfile_path)app $(mkfile_path)unit  $(mkfile_path)device $(mkfile_path)walker $(mkfile_path)section $(mkfile_path)judge
 
 INCLUDES += \
 	-I$(mkfile_path)app \

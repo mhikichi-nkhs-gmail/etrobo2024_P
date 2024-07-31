@@ -1,5 +1,6 @@
 #include "Section.h"
 #include "Len_judge.h"
+#include "CurveVirtual.h"
 
 
 extern SimpleWalker *gWalker;
@@ -9,6 +10,8 @@ extern SpeedControl *gSpeed;
 
 Section::Section()
 {
+        j_flag = false;
+        w_flag = false;
 }
 
 Section::~Section()
@@ -20,6 +23,27 @@ Section::~Section()
 
 bool Section::run()
 {
+    //Judge初期化
+    if(j_flag == false)
+    {
+        printf("ooooo\n");
+        mJudge->reset();
+        printf("ooooo\n");
+
+        j_flag = true;
+    }
+    
+    //Walker初期化
+    if(w_flag == false)
+    {
+        printf("iiiiii\n");
+        mWalker->reset();
+        printf("iiiiii\n");
+
+        w_flag = true;
+    }
+  
+
     //判定
     if(mJudge->judge())
     return true;
@@ -39,6 +63,9 @@ Walker *Section::selectWalker(int no)
         case TRACER:
             mWalker = (Walker*)(new LineTracer(gOdo,gSpeed));
            break;
+        case CURVEVIRTUAL :
+            mWalker = (Walker*)(new CurveVirtual(gOdo,gSpeed));
+            break;
         default:
             msg_log("selectWalker error!!");
     }

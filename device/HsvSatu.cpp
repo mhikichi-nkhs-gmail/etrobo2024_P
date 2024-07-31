@@ -6,7 +6,7 @@ HsvSatu::HsvSatu()
 
 }
 
-float HsvSatu::getValue()
+double HsvSatu::getValue()
 {
     return mLpf->getFillteredValue();
 }

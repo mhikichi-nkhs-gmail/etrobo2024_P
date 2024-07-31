@@ -6,7 +6,7 @@ class HsvHue : public Measure
 {
     public:
         HsvHue();
-        float getValue();
+        double getValue();
         void update(float h);
 
     private:

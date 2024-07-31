@@ -16,9 +16,11 @@ class Section {
         Walker *selectWalker(int no);
         Judge *selectJudge(int no);
 
+
         enum WALKER_NO {
             WALKER,
-            TRACER
+            TRACER,
+            CURVEVIRTUAL
         };
 
         enum JUDGE_NO{
@@ -30,7 +32,8 @@ class Section {
         Judge *mJudge;
 
     private:
-
+        bool j_flag;
+        bool w_flag;
 };
 
 #endif

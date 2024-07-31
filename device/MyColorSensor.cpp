@@ -28,6 +28,7 @@ MyColorSensor::MyColorSensor(ePortS port,
     mMax_B  = 165;
     mMin_B  = 8;
 #else
+    //実機
     mMax_R  = 95;
     mMin_R  = 0;
     mMax_G  = 85;
@@ -172,7 +173,7 @@ void MyColorSensor::getHSV(rgb_f_t rgb, hsv_t& hsv)
     hsv.h = h;
     hsv.s = s;
     hsv.v = v;
-
+    
 }
 
 // debug用

@@ -6,7 +6,7 @@ Length::Length()
 
 }
 
-float Length::getValue()
+double Length::getValue()
 {
     return mLength;
 }

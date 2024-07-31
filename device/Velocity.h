@@ -12,7 +12,7 @@ class Velocity : public Measure
 {
     public:
         Velocity();
-        float getValue();
+        double getValue();
         void update(float cnt1,float cnt2);
     private:
         float mVelocity;

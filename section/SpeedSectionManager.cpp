@@ -1,11 +1,13 @@
 #include "SpeedSectionManager.h"
 #include "Section.h"
 #include "Len_judge.h"
+#include "CurveVirtual.h"
 
 SpeedSectionManager::SpeedSectionManager()
 {
     // test用初期化
  #if defined(MAKE_RIGHT)
+ 
       const int _EDGE = LineTracer::RIGHTEDGE;
 #else
       const int _EDGE = LineTracer::LEFTEDGE;
@@ -15,10 +17,15 @@ SpeedSectionManager::SpeedSectionManager()
     // LineTracer テスト
     LineTracer* tracer0 = (LineTracer*)sc0->selectWalker(Section::TRACER);
     Len_judge* judge0 =(Len_judge*)sc0->selectJudge(Section::LENGTH);
+    
+    //CurveVirtual* curve0 = (CurveVirtual*)sc0->selectWalker(Section::CURVEVIRTUAL);
 
-    tracer0->setParam(80, 0 ,  30, 0.2, 0.1 );
+
+    tracer0->setParam(15, 0 , 10 , 0.1, 0 );
     tracer0->setEdgeMode(_EDGE);
     judge0->setLength(300);
+    
+    //curve0->reset();
     addSection(sc0);
 
 //1
@@ -28,7 +35,7 @@ SpeedSectionManager::SpeedSectionManager()
     LineTracer* tracer1 = (LineTracer*)sc1->selectWalker(Section::TRACER);
     Len_judge* judge1 =(Len_judge*)sc1->selectJudge(Section::LENGTH);
 
-    tracer1->setParam(10, 0 ,  30, 0.2, 0.1 );
+    tracer1->setParam(15, 0 ,  10, 0.1, 0.1 );
     tracer1->setEdgeMode(_EDGE);
     judge1->setLength(320);
     //距離目安　tracer1->setLength(20);

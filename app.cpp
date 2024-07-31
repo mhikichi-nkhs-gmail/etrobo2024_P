@@ -16,8 +16,10 @@
 #include "SimpleWalker.h"
 #include "SpeedControl.h"
 #include "LineTracer.h"
-
 #include "Scene.h"
+#include "X_Position.h"
+#include "Y_Position.h"
+#include "CurveVirtual.h"
 
 using namespace ev3api;
 
@@ -46,6 +48,10 @@ SimpleWalker *gWalker;
 LineTracer *gTracer;
 
 Scene *gScene;
+X_Position *gX;
+Y_Position *gY;
+
+CurveVirtual *gCurveVirtual;
 
 
 static void user_system_create() {
@@ -58,15 +64,16 @@ static void user_system_create() {
   gLength = new Length();
   gTurnAngle = new TurnAngle();
   gVelocity = new Velocity();
-
-  gOdo = new Odometry(gLeftWheel,gRightWheel,gLength,gTurnAngle,gVelocity);
+  gX = new X_Position();
+  gY = new Y_Position();
+  gOdo = new Odometry(gLeftWheel,gRightWheel,gLength,gTurnAngle,gVelocity,gX,gY);
   gSpeed = new SpeedControl(gOdo,gVelocity);  
   gWalker = new SimpleWalker(gOdo,gSpeed); 
   gTracer = new LineTracer(gOdo,gSpeed);
-
   gPolling = new Polling(gColor,gOdo);
 
   gScene = new Scene();
+  gCurveVirtual = new CurveVirtual(gOdo,gSpeed);
 
 }
 static void user_system_destroy() {
@@ -108,6 +115,8 @@ void polling_task(intptr_t unused) {
     float v = gVelocity->getValue();
     float h = gHue->getValue();
     float s = gSatu->getValue();
+    
+
 
     rgb_raw_t rgb = gColor->getRgb();
     static char buf[100];

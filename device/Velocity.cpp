@@ -10,7 +10,7 @@ Velocity::Velocity()
     }
 }
 
-float Velocity::getValue()
+double Velocity::getValue()
 {
     int nextConts_idx = mCounts_idx+1;
     if(nextConts_idx==MAX_CNT)

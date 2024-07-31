@@ -65,6 +65,7 @@ void SimpleWalker::run() {
     if(pwm_l<-100) pwm_l=-100;
 
     mOdo->setPwm(pwm_l,pwm_r);
+    
 }
 
 /**

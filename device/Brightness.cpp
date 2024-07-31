@@ -6,7 +6,7 @@ Brightness::Brightness()
 
 }
 
-float Brightness::getValue()
+double Brightness::getValue()
 {
     return mLpf->getFillteredValue();
 }

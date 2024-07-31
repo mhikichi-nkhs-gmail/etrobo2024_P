@@ -10,16 +10,20 @@
 Odometry::Odometry(Motor *left, Motor *right,
 					Length *len,
 					TurnAngle *angle,
-					Velocity *velo):
+					Velocity *velo,
+					X_Position *gX,
+					Y_Position *gY):
 	mLeftMotor(left),
 	mRightMotor(right),
 	mTurnAngle(angle),
 	mLength(len),
-	mVelocity(velo)
+	mVelocity(velo),
+	mX_odo(gX),
+	mY_odo(gY)
 {
 	mLeftMotor->reset();
 	mRightMotor->reset();
-	
+		
 
 	x=y=th=0.0;
 	sumlen=0;
@@ -84,6 +88,12 @@ void Odometry::calc()
 
 	mLength->update(sumlen);
 	mTurnAngle->update(th);
+	mX_odo->update(x);
+	//printf("x = %lf\n",x);
+	mY_odo->update(y);
+	//printf("y = %lf",y);
+
+	
 
 }
 
@@ -92,3 +102,4 @@ void Odometry::setPwm(int left,int right)
 	mLeftMotor->setPWM(left);
 	mRightMotor->setPWM(right);
 }
+

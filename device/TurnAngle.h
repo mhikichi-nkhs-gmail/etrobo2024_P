@@ -8,7 +8,7 @@ class TurnAngle : public Measure
 {
     public:
         TurnAngle();
-        float getValue();
+        double getValue();
         void update(float angle);
 
     private:

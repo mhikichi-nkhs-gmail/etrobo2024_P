@@ -36,7 +36,7 @@ protected:
     bool mMode_flag;//setComandVだとtrue、setComandだとfalse
 
     SpeedControl *mSpeedControl;
-
+    
 private:
 
 };
