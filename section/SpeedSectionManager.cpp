@@ -22,6 +22,7 @@ SpeedSectionManager::SpeedSectionManager()
 
 
     tracer0->setParam(15, 0 , 10 , 0.1, 0 );
+    tracer0->setParam(100, 0 ,  10, 5, 2 );
     tracer0->setEdgeMode(_EDGE);
     judge0->setLength(300);
     
@@ -36,6 +37,7 @@ SpeedSectionManager::SpeedSectionManager()
     Len_judge* judge1 =(Len_judge*)sc1->selectJudge(Section::LENGTH);
 
     tracer1->setParam(15, 0 ,  10, 0.1, 0.1 );
+    tracer1->setParam(70, 0 ,  10, 5, 2 );
     tracer1->setEdgeMode(_EDGE);
     judge1->setLength(320);
     //距離目安　tracer1->setLength(20);
@@ -47,7 +49,7 @@ SpeedSectionManager::SpeedSectionManager()
     LineTracer* tracer2 = (LineTracer*)sc2->selectWalker(Section::TRACER);
     Len_judge* judge2 =(Len_judge*)sc2->selectJudge(Section::LENGTH);
 
-    tracer2->setParam(80, 0 ,  30, 0.2, 0.1 );
+    tracer2->setParam(100, 0 ,  10, 5, 2 );
     tracer2->setEdgeMode(_EDGE);
     judge2->setLength(510);
     addSection(sc2);
@@ -59,7 +61,7 @@ SpeedSectionManager::SpeedSectionManager()
     LineTracer* tracer3 = (LineTracer*)sc3->selectWalker(Section::TRACER);
     Len_judge* judge3 =(Len_judge*)sc3->selectJudge(Section::LENGTH);
 
-    tracer3->setParam(10, 0 ,  30, 0.2, 0.1 );
+    tracer3->setParam(70, 0 ,  10, 5, 2 );
     tracer3->setEdgeMode(_EDGE);
     judge3->setLength(520);
     //距離目安　tracer3->setLength(524);
@@ -71,7 +73,7 @@ SpeedSectionManager::SpeedSectionManager()
     LineTracer* tracer4 = (LineTracer*)sc4->selectWalker(Section::TRACER);
     Len_judge* judge4 =(Len_judge*)sc4->selectJudge(Section::LENGTH);
 
-    tracer4->setParam(80, 0 ,  30, 0.2, 0.1 );
+    tracer4->setParam(100, 0 ,  10, 5, 2 );
     tracer4->setEdgeMode(_EDGE);
     judge4->setLength(548);
     //距離目安　tracer4->setLength(548);

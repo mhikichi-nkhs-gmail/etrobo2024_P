@@ -30,6 +30,10 @@ APPL_CXXOBJS += \
 	X_Position.o \
 	Y_Position.o
 
+	WloopSectionManager.o \
+	Judge.o \
+	Len_judge.o \
+	Blue_judge.o
 
 SRCLANG := c++
 

@@ -2,16 +2,24 @@
 #define BLUE_JUDGE_H_
 
 #include "Judge.h"
-#include "Brightness.h"
 #include "HsvHue.h"
 #include "HsvSatu.h"
 
-class blue_judge : public Judge
+class Blue_judge : public Judge
 {
     public:
         bool judge();
-        void setBlue();
-        double sblue;
-};
+        void setBlueH(double maxblue,double minblue);
+        void setBlueS(double maxblue,double minblue);
+        double sblueh1;
+        double sblueh2;
+        double sblues1;
+        double sblues2;
+        double maxblue;
+        double minblue;
+    protected:
+
+        double Blue;
+};  
 
 #endif

@@ -5,6 +5,8 @@
 Judge::Judge()
 {
     mLength = gLength;
+    mHue = gHue;
+    mSatu = gSatu;
 }
 
 bool Judge::judge()

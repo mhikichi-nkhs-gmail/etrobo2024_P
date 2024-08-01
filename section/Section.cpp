@@ -1,6 +1,7 @@
 #include "Section.h"
 #include "Len_judge.h"
 #include "CurveVirtual.h"
+#include "Blue_judge.h"
 
 
 extern SimpleWalker *gWalker;
@@ -78,6 +79,9 @@ Judge *Section::selectJudge(int no)
    switch(no) {
         case LENGTH:
             mJudge = (Judge*)(new Len_judge());
+            break;
+        case BLUE:
+            mJudge = (Judge*)(new Blue_judge());
             break;
         default:
             msg_log("selectJudge error!!");
