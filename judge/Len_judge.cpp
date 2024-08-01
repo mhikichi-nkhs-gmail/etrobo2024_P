@@ -1,5 +1,5 @@
-    #include "Len_judge.h"
-    #include "Judge.h"
+#include "Len_judge.h"
+#include "Judge.h"
 
 bool Len_judge::judge()
 {

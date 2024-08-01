@@ -28,11 +28,8 @@ APPL_CXXOBJS += \
 	Len_judge.o \
 	CurveVirtual.o \
 	X_Position.o \
-	Y_Position.o
-
+	Y_Position.o \
 	WloopSectionManager.o \
-	Judge.o \
-	Len_judge.o \
 	Blue_judge.o
 
 SRCLANG := c++

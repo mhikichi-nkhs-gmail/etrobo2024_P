@@ -15,9 +15,11 @@ public:
     void calcTurn();
     void setParam();
 private:
-    double x; //中心x座標
-    double y; //中心y座標
+    double X0; //中心x座標
+    double Y0; //中心y座標
     double R; //旋回半径
-
+    double rad;
+    double x1;
+    double y1;
 };
 #endif 

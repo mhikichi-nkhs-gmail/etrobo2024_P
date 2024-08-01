@@ -18,15 +18,14 @@ SpeedSectionManager::SpeedSectionManager()
     LineTracer* tracer0 = (LineTracer*)sc0->selectWalker(Section::TRACER);
     Len_judge* judge0 =(Len_judge*)sc0->selectJudge(Section::LENGTH);
     
-    //CurveVirtual* curve0 = (CurveVirtual*)sc0->selectWalker(Section::CURVEVIRTUAL);
-
+    CurveVirtual* curve0 = (CurveVirtual*)sc0->selectWalker(Section::CURVEVIRTUAL);
+    curve0->reset();
 
     tracer0->setParam(15, 0 , 10 , 0.1, 0 );
     tracer0->setParam(100, 0 ,  10, 5, 2 );
     tracer0->setEdgeMode(_EDGE);
     judge0->setLength(300);
     
-    //curve0->reset();
     addSection(sc0);
 
 //1
