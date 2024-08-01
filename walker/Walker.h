@@ -29,7 +29,8 @@ class Walker
         Brightness *mBright;
         X_Position *mX;
         Y_Position *mY;
-
+        float mAngle;
+        
 
     private:
 
