@@ -7,7 +7,7 @@ class SpeedSectionManager : public SectionManager {
         SpeedSectionManager();
         bool run();
         void param();
-        int botton_no;
+        int button_no;
 
     protected:
 
