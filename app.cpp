@@ -127,8 +127,8 @@ void polling_task(intptr_t unused) {
 }
 
 void tracer_task(intptr_t unused) {
-
-  if (ev3_button_is_pressed(BACK_BUTTON)) {
+ev3_sensor_config(EV3_PORT_1, TOUCH_SENSOR);
+  if (ev3_touch_sensor_is_pressed(EV3_PORT_1) == 1) {
     wup_tsk(MAIN_TASK);  // 左ボタン押下でメインを起こす
   } else {
 
