@@ -64,7 +64,7 @@ float LineTracer::calcTurn(float val1) {
   //  mPid->debug=true;
 
     if(mLeftEdge) val1_turn = -val1_turn;
-    setBias(-mForward*(1-mCurve)/(1+mCurve)*mAngleKp);
+    setBias(mBias);
     float turn =  val1_turn+mBias;
    
     return turn;
@@ -97,8 +97,8 @@ void LineTracer::setParam(float speed,float target,float kp, float ki, float kd,
     mPid->setKi(mIFactor);
     mPid->setKd(mDFactor);
    
-    mCurve = angleTarget;
-    mAngleKp = angleKp;
+    mBias = angleTarget;
+    
 
 }
 
