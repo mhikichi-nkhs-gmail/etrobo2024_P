@@ -46,10 +46,15 @@ void LineTracer::run()
     SimpleWalker::run();
 
 }
-
+void LineTracer::setData(double LineArray[])
+{
+    LineTracer::setParam(LineArray[1],LineArray[2],LineArray[3],LineArray[4],LineArray[5],LineArray[6],LineArray[7]);
+    LineTracer::setEdgeMode(LineArray[0]);
+}
 
    
-float LineTracer::calcTurn(float val1) {
+float LineTracer::calcTurn(float val1)
+{
 
     float bai = 1.0;   //CompositeSection用？
     if(mSpeedControl->getCurrentSpeed()<15) {  //12
@@ -70,10 +75,10 @@ float LineTracer::calcTurn(float val1) {
     return turn;
 }
 
-void LineTracer::setParam(float speed,float target,float kp, float ki, float kd) 
+void LineTracer::setParam(float speed,float target,float kp,float ki,float kd) 
 {
-    setParam(speed, target, kp,  ki,  kd,
-                         1, 1);
+    setParam(speed, target, kp,  ki,  kd, 
+                        1, 1);
 
 }
 

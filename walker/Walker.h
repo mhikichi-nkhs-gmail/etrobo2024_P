@@ -21,6 +21,7 @@ class Walker
         virtual void printInfo();
         virtual void setparam();
         virtual void reset();
+        virtual void setData(double w[]);
 
     protected:
         Odometry *mOdo;

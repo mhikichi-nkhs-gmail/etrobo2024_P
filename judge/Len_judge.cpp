@@ -7,7 +7,7 @@ bool Len_judge::judge()
    
    if(len > slen)
     {
-        printf("ffffffffffffff%f \n",len,"hhhhhhhhhhhhhhh%f \n",slen);
+        //printf("ffffffffffffff%f \n",len,"hhhhhhhhhhhhhhh%f \n",slen);
         return true;
     }
     else
@@ -19,5 +19,10 @@ bool Len_judge::judge()
 void Len_judge::setLength(double setLen)
 {
     slen = setLen;
-    printf("slen%f \n",slen);
+    //printf("slen%f \n",slen);
+}
+
+void Len_judge::setData(double JudgeArray[])
+{
+    Len_judge::setLength(JudgeArray[0]);
 }

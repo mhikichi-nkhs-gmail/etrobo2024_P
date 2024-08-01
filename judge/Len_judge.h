@@ -11,6 +11,7 @@ class Len_judge : public Judge
     public:
         bool judge();
         void setLength(double setLen);
+        void setData(double JudgeArray[]);
         double setLen;
         double slen;
 

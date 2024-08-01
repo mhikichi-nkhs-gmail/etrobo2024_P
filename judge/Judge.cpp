@@ -28,3 +28,8 @@ bool Judge::calc_judge()
 {
 
 }
+
+void Judge::setData(double j[])
+{
+    
+}
