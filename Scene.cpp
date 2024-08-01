@@ -5,6 +5,7 @@
 Scene::Scene():
     mState(UNDEFINED)
 {
+    mSm = new SectionManager();
     mSsm = new SpeedSectionManager();
     mWsm = new WloopSectionManager();
 }
@@ -14,6 +15,9 @@ bool Scene::run()
     switch(mState) {
         case UNDEFINED:
             execUndefined();
+            break;
+        case MODE:
+            execMode();
             break;
         case START:
             execStart();
@@ -35,16 +39,29 @@ bool Scene::run()
 
 void Scene::execUndefined()
 {
-    mState=START;
+    mState=MODE;
+}
+
+void Scene::execMode()
+{
+   
+
+    if(mSm->setMode()){
+        delete mSm;
+        mState=START;
+    }
+    
 }
 void Scene::execStart()
 {
 
     // とりあえず動かすだけなので、設計に基づいて書き直そう
-    //msg_log("Press Touch Button to start.");
    
     if (ev3_button_is_pressed(ENTER_BUTTON))
     {
+        msg_log("Press Touch Button to start.");
+        int 	ev3_battery_current_mA ();
+        printf("本体バッテリー%d\n"+ ev3_battery_current_mA());
             mState=SPEED;
     }
 }

@@ -1,4 +1,5 @@
 #include "SectionManager.h"
+#include "ev3api.h"
 
 SectionManager::SectionManager()
 {
@@ -40,4 +41,18 @@ void SectionManager::reset()
 void SectionManager::setData()
 {
     
+}
+
+bool SectionManager::setMode()
+{
+    if(ev3_button_is_pressed(LEFT_BUTTON)){
+        button_no = 0;
+    }else if(ev3_button_is_pressed(RIGHT_BUTTON)){
+        button_no = 1;
+    }
+}
+
+int SectionManager::getMode()
+{
+    return button_no;
 }

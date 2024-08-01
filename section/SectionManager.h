@@ -23,6 +23,9 @@ class SectionManager {
         void reset();
         typedef struct info_data;
         void setData();
+        bool setMode();
+        int getMode();
+        int button_no;
 
     protected:
         Section *mSection[100];

@@ -113,14 +113,21 @@ bool SpeedSectionManager::run()
 
 void SpeedSectionManager::param()
 {
-    
-    
      for(int i=0;i<6;i++){
         Section *sc0 = new Section();
+        SectionManager *sm0 = new SectionManager();
+
         Walker* walker0 = sc0->selectWalker(Section::TRACER);
         Len_judge* judge0 = (Len_judge*)sc0->selectJudge(Section::LENGTH);
 
-        walker0->setData(data[i].param);
-        judge0->setData(data[i].jparam);
-     }
+        button_no = sm0->getMode();
+    
+        if(button_no == 0){
+            walker0->setData(Ldata[i].param);
+            judge0->setData(Ldata[i].jparam);
+        }else{
+            walker0->setData(Rdata[i].param);
+            judge0->setData(Rdata[i].jparam);
+        }
+    }
 }
