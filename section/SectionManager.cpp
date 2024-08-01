@@ -37,3 +37,7 @@ void SectionManager::reset()
     mLastIdx=0;
 }
 
+void SectionManager::setData()
+{
+    
+}

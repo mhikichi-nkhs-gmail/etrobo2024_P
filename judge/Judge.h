@@ -19,6 +19,7 @@ class Judge
         virtual bool judge();
         virtual void set(double param[]);
         virtual void reset();
+        virtual void setData(double j[]);
     protected:
         bool  calc_judge();
         Length *mLength;

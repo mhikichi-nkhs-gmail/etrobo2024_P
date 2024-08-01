@@ -3,6 +3,7 @@
 
 #include "SpeedSectionManager.h"
 #include "WloopSectionManager.h"
+#include "ev3api.h"
 
 class Scene{
     public:

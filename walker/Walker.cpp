@@ -31,3 +31,8 @@ void Walker::reset()
 {
     
 }
+
+void Walker::setData(double w[])
+{
+
+}

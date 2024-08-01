@@ -120,15 +120,15 @@ void polling_task(intptr_t unused) {
 
     rgb_raw_t rgb = gColor->getRgb();
     static char buf[100];
-    sprintf(buf,"len , bri,H,S r,g,b, turn, v : %3.3f,  %7.4f,  %5.1f, %3.2f, %d,%d,%d  , %4.2f, %4.2f \n",len,br,h,s,  rgb.r, rgb.g,rgb.b ,turn,v);
-    msg_log(buf);
+    //sprintf(buf,"len , bri,H,S r,g,b, turn, v : %3.3f,  %7.4f,  %5.1f, %3.2f, %d,%d,%d  , %4.2f, %4.2f \n",len,br,h,s,  rgb.r, rgb.g,rgb.b ,turn,v);
+    //msg_log(buf);
 
   ext_tsk();
 }
 
 void tracer_task(intptr_t unused) {
-
-  if (ev3_button_is_pressed(BACK_BUTTON)) {
+ev3_sensor_config(EV3_PORT_1, TOUCH_SENSOR);
+  if (ev3_touch_sensor_is_pressed(EV3_PORT_1) == 1) {
     wup_tsk(MAIN_TASK);  // 左ボタン押下でメインを起こす
   } else {
 

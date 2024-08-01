@@ -5,7 +5,7 @@
 
 SpeedSectionManager::SpeedSectionManager()
 {
-    // test用初期化
+/*    // test用初期化
  #if defined(MAKE_RIGHT)
  
       const int _EDGE = LineTracer::RIGHTEDGE;
@@ -109,4 +109,18 @@ bool SpeedSectionManager::run()
     return true;
 
     return false;
+}
+
+void SpeedSectionManager::param()
+{
+    
+    
+     for(int i=0;i<6;i++){
+        Section *sc0 = new Section();
+        Walker* walker0 = sc0->selectWalker(Section::TRACER);
+        Len_judge* judge0 = (Len_judge*)sc0->selectJudge(Section::LENGTH);
+
+        walker0->setData(data[i].param);
+        judge0->setData(data[i].jparam);
+     }
 }
