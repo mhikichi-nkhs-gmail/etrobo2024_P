@@ -15,14 +15,15 @@ void CurveVirtual::run()
     nX = mX->getValue();//現在の座標
     nY = mY->getValue();
 
-    rad1 = mAngle;
-    rad1=rad1*M_PI/180;
+    rad2 = mAngle->getValue();
+    printf("rad2 = %lf\n",rad2);
+    rad2=rad2*M_PI/180;
 
     double oLength;//中心との距離
     double direction;
 
-    double sX=-3*sin(rad1)+nX;
-    double sY=3*cos(rad1)+nY;
+    double sX=-3*sin(rad2)+nX;
+    double sY=3*cos(rad2)+nY;
 
     oLength=sqrt((sX-x1)*(sX-x1)+(sY-y1)*(sY-y1));//中心との距離計算
     mTurn = calcTurn(oLength);
@@ -108,4 +109,9 @@ void CurveVirtual::setParam(double speed,double target,double kp, double ki, dou
 void CurveVirtual::setBias(double curve)
 {
      mBias = curve;
+}
+
+void CurveVirtual::setData(double LineArray[])
+{
+    CurveVirtual::setParam(LineArray[1],LineArray[2],LineArray[3],LineArray[4],LineArray[5],LineArray[6],LineArray[7]);
 }

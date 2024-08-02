@@ -19,6 +19,9 @@ public:
                         double angleTarget,double angleKp);
 
     void setBias(double curve);
+
+    void setData(double LineArray[]);
+
 private:
     double nX;
     double nY;
