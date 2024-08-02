@@ -8,7 +8,7 @@ Walker::Walker( Odometry *odo):
     mBright = gBrightness;
     mX = gX;
     mY = gY;
-    
+    mAngle = gTurnAngle;
 }
 
 

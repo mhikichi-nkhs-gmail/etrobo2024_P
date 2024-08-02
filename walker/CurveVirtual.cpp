@@ -44,8 +44,8 @@ void CurveVirtual::reset()
     printf("X0 = %lf\n",X0);
     Y0 = mY->getValue();
     printf("Y0 = %lf\n",Y0);
-    rad1 = mAngle;
-    //printf("rad = %lf\n",rad1);
+    rad1 = mAngle->getValue();
+    printf("rad1 = %lf\n",rad1);
     //度からrad変換
     rad1=rad1*M_PI/180;
    

@@ -9,6 +9,7 @@
 extern Brightness *gBrightness;
 extern X_Position *gX;
 extern Y_Position *gY;
+extern TurnAngle *gTurnAngle;
 
 
 class Walker
@@ -29,7 +30,7 @@ class Walker
         Brightness *mBright;
         X_Position *mX;
         Y_Position *mY;
-        float mAngle;
+        TurnAngle *mAngle;
         
 
     private:

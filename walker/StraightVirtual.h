@@ -41,7 +41,7 @@ private:
 
     double mBias;
 
-    double mAngle;
+    
 
     bool mLeftTurn;
      
