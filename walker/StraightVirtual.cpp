@@ -92,7 +92,7 @@ void StraightVirtual::setParam(double speed,double target,double kp, double ki, 
     mPid->setKi(mIFactor);
     mPid->setKd(mDFactor);
    
-    mBias = angleTarget;
+    
     
 
 }
