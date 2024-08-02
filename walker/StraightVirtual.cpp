@@ -10,15 +10,22 @@ StraightVirtual::StraightVirtual(Odometry *odo,
 
 }
 
+
 void StraightVirtual::run()
 {   
     nX = mX->getValue();
     nY = mY->getValue();
 
-    double brightness;
+    double distance;//直線とのずれ
     double direction;
-    brightness=sqrt((nX-X0)*(nX-X0)+(nY-Y0)*(nY-Y0));
-    mTurn = calcTurn(brightness);
+
+    double distancek=(y1-Y0)*nX-(x1-X0)*nY+x1*Y0-y1*X0;
+
+    if(distancek>=0)
+    distancek=distancek*-1;
+
+    distance=distancek/sqrt((x1-X0)*(x1-X0)+(y1-Y0)*(y1-Y0));
+    mTurn = calcTurn(distance);
 
    /* static char buf[256];
     sprintf(buf,"LT %2.3f, %d,%d",brightness,mTargetSpeed,mTurn);
