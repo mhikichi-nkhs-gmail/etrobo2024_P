@@ -103,31 +103,37 @@ SpeedSectionManager::SpeedSectionManager()
 
 bool SpeedSectionManager::run()
 {
-    if(mSection[mSectionIdx]->run())
+    if(mSection[mSectionIdx]->run()){
+        //printf("a\n");
         mSectionIdx++;
-    if(mSectionIdx>1)
-    return true;
-
-    return false;
+    }
+    if(mSectionIdx>4){
+        //printf("c\n");
+        return true;
+    }else{
+        //printf("d\n");
+        return false;
+    }
 }
-
 void SpeedSectionManager::param()
 {
-     for(int i=0;i<6;i++){
+    
+     for(int i=0;i<5;i++){
         Section *sc0 = new Section();
-        SectionManager *sm0 = new SectionManager();
 
         Walker* walker0 = sc0->selectWalker(Section::TRACER);
         Len_judge* judge0 = (Len_judge*)sc0->selectJudge(Section::LENGTH);
-
-        button_no = sm0->getMode();
-    
-        if(button_no == 0){
+        
+        if(SectionManager::course == 0){
+            
             walker0->setData(Ldata[i].param);
             judge0->setData(Ldata[i].jparam);
-        }else{
+        }else if(SectionManager::course == 1){
+            
             walker0->setData(Rdata[i].param);
             judge0->setData(Rdata[i].jparam);
         }
+        
+        addSection(sc0);
     }
 }

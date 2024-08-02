@@ -85,6 +85,7 @@ static void user_system_destroy() {
 
 
 void main_task(intptr_t unused) {
+  ev3_sensor_config(EV3_PORT_1, TOUCH_SENSOR);
   user_system_create();
 
   sta_cyc(POLLING_CYC);
@@ -127,10 +128,12 @@ void polling_task(intptr_t unused) {
 }
 
 void tracer_task(intptr_t unused) {
-ev3_sensor_config(EV3_PORT_1, TOUCH_SENSOR);
-  if (ev3_touch_sensor_is_pressed(EV3_PORT_1) == 1) {
+  //printf("if前\n");
+  if (ev3_touch_sensor_is_pressed(EV3_PORT_1)) {
+    printf("タッチセンサー\n");
     wup_tsk(MAIN_TASK);  // 左ボタン押下でメインを起こす
   } else {
+
 
     // とりあえずここで、アームの固定。設計に基づいて変えるべし
     int arm_cnt = gArm->getCount();
