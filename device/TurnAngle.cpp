@@ -11,7 +11,7 @@ double TurnAngle::getValue()
     return mAngleDeg?mAngle*180/M_PI:mAngle;
 }
 
-void TurnAngle::update(float angle)
+void TurnAngle::update(double angle)
 {
     mAngle = angle;
 }

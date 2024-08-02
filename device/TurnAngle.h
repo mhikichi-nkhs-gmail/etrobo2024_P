@@ -9,10 +9,10 @@ class TurnAngle : public Measure
     public:
         TurnAngle();
         double getValue();
-        void update(float angle);
+        void update(double angle);
 
     private:
-        float mAngle;
+        double mAngle;
         bool mAngleDeg;
 };
 

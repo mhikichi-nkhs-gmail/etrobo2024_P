@@ -12,13 +12,20 @@ CurveVirtual::CurveVirtual(Odometry *odo,
 
 void CurveVirtual::run()
 {   
-    nX = mX->getValue();
+    nX = mX->getValue();//現在の座標
     nY = mY->getValue();
 
-    double brightness;
+    rad1 = mAngle;
+    rad1=rad1*M_PI/180;
+
+    double oLength;//中心との距離
     double direction;
-    brightness=sqrt((nX-X0)*(nX-X0)+(nY-Y0)*(nY-Y0));
-    mTurn = calcTurn(brightness);
+
+    double sX=-3*sin(rad1)+mX;
+    double sY=3*cos(rad1)+mY;
+
+    oLength=sqrt((sX-x1)*(sX-x1)+(sY-y1)*(sY-y1));//中心との距離計算
+    mTurn = calcTurn(oLength);
 
    /* static char buf[256];
     sprintf(buf,"LT %2.3f, %d,%d",brightness,mTargetSpeed,mTurn);
@@ -94,6 +101,7 @@ void CurveVirtual::setParam(double speed,double target,double kp, double ki, dou
    
     mBias = angleTarget;
     
+    R = angleKp;
 
 }
 
