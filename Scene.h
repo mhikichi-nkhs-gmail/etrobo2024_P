@@ -16,7 +16,6 @@ class Scene{
         void execSpeed();
         void execWloop();
         void execGarage();
-        int button_no;
 
     private:
         enum State {
@@ -30,8 +29,6 @@ class Scene{
         };
 
         State mState;
-
-        SectionManager *mSm;
         SpeedSectionManager *mSsm;
         WloopSectionManager *mWsm;
 };

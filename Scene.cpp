@@ -5,7 +5,6 @@
 Scene::Scene():
     mState(UNDEFINED)
 {
-    mSm = new SectionManager();
     mSsm = new SpeedSectionManager();
     mWsm = new WloopSectionManager();
 }
@@ -44,14 +43,22 @@ void Scene::execUndefined()
 
 void Scene::execMode()
 {
-   
+    int button_no = -1;
+   if(ev3_button_is_pressed(LEFT_BUTTON)){
+        printf("左を選択\n");
+        button_no = 0;
+    }else if(ev3_button_is_pressed(RIGHT_BUTTON)){
+        printf("右を選択\n");
+        button_no = 1;
+    }
 
-    if(mSm->setMode()){
-        delete mSm;
+    if((button_no == 0)||(button_no == 1)){
+        SectionManager::course = button_no;
         mState=START;
     }
     
 }
+
 void Scene::execStart()
 {
 
@@ -59,9 +66,12 @@ void Scene::execStart()
    
     if (ev3_button_is_pressed(ENTER_BUTTON))
     {
+        printf("中央ボタン\n");
+        mSsm->param();
         msg_log("Press Touch Button to start.");
-        int 	ev3_battery_current_mA ();
-        printf("本体バッテリー%d\n"+ ev3_battery_current_mA());
+        int a;
+        a = ev3_battery_voltage_mV ();
+        printf("本体バッテリー%d\n",a);
             mState=SPEED;
     }
 }

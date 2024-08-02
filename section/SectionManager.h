@@ -20,12 +20,9 @@ class SectionManager {
         ~SectionManager();
         virtual bool run();
         void addSection(Section *);
-        void reset();
+        virtual void reset();
         typedef struct info_data;
-        void setData();
-        bool setMode();
-        int getMode();
-        int button_no;
+        static int course;
 
     protected:
         Section *mSection[100];
