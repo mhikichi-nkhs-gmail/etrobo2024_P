@@ -51,9 +51,9 @@ void CurveVirtual::reset()
    
     //中心座標の計算
     x1 = R * cos(rad1) + X0;
-    //printf("X0 = %lf\n",X0);
+    printf("x1 = %lf\n",x1);
     y1 = R * sin(rad1) + Y0;
-    //printf("Y0 = %lf\n",Y0);
+    printf("y1 = %lf\n",y1);
 
 }
 
