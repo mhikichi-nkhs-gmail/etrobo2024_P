@@ -121,16 +121,18 @@ void SpeedSectionManager::param()
      for(int i=0;i<5;i++){
         Section *sc0 = new Section();
 
-        Walker* walker0 = sc0->selectWalker(Section::TRACER);
-        Len_judge* judge0 = (Len_judge*)sc0->selectJudge(Section::LENGTH);
+        /*Walker* walker0 = sc0->selectWalker(Section::TRACER);
+        Len_judge* judge0 = (Len_judge*)sc0->selectJudge(Section::LENGTH);*/
         
         if(SectionManager::course == 0){
-            
+            Walker* walker0 = sc0->selectWalker(Ldata[i].wid);
             walker0->setData(Ldata[i].param);
+            Len_judge* judge0 = (Len_judge*)sc0->selectJudge(Ldata[i].jid);
             judge0->setData(Ldata[i].jparam);
         }else if(SectionManager::course == 1){
-            
+            Walker* walker0 = sc0->selectWalker(Rdata[i].wid);
             walker0->setData(Rdata[i].param);
+            Len_judge* judge0 = (Len_judge*)sc0->selectJudge(Ldata[i].jid);
             judge0->setData(Rdata[i].jparam);
         }
         
