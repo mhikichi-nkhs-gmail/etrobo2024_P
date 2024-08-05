@@ -50,15 +50,15 @@ void StraightVirtual::reset()
     rad1=rad1*M_PI/180;
    
     //中心座標の計算
-    x1 = R * cos(rad1) + X0;
+    x1 = -R * sin(rad1) + X0;
     //printf("X0 = %lf\n",X0);
-    y1 = R * sin(rad1) + Y0;
+    y1 = R * cos(rad1) + Y0;
     //printf("Y0 = %lf\n",Y0);
 
 }
 
 
-double StraightVirtual::calcTurn(double val1)
+double StraightVirtual::calcTurn(double distance)
 {
 double bai = 1.0;   //CompositeSection用？
     /*if(mSpeedControl->getCurrentSpeed()<15) {  //12
@@ -68,7 +68,7 @@ double bai = 1.0;   //CompositeSection用？
     mPid->setKi(mIFactor*bai);
     mPid->setKd(mDFactor*bai);*/
 
-    double val1_turn =  mPid->getOperation(val1);
+    double val1_turn =  mPid->getOperation(distance);
 
   //  mPid->debug=true;
 
@@ -99,7 +99,9 @@ void StraightVirtual::setParam(double speed,double target,double kp, double ki, 
     mPid->setKi(mIFactor);
     mPid->setKd(mDFactor);
    
+    mBias = angleTarget;
     
+    R = angleKp;
     
 
 }

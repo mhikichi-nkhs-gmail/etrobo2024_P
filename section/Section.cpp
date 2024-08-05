@@ -2,6 +2,7 @@
 #include "Len_judge.h"
 #include "CurveVirtual.h"
 #include "Blue_judge.h"
+#include "StraightVirtual.h"
 
 
 extern SimpleWalker *gWalker;
@@ -66,6 +67,9 @@ Walker *Section::selectWalker(int no)
            break;
         case CURVEVIRTUAL :
             mWalker = (Walker*)(new CurveVirtual(gOdo,gSpeed));
+            break;
+        case STRAIGHTVIRTUAL :
+            mWalker = (Walker*)(new StraightVirtual(gOdo,gSpeed));
             break;
         default:
             msg_log("selectWalker error!!");
