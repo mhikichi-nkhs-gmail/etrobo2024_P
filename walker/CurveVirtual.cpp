@@ -25,8 +25,15 @@ void CurveVirtual::run()
     double sX=-3*sin(rad2)+nX;
     double sY=3*cos(rad2)+nY;
 
+    printf("sY = %lf\n",sY);
+
     oLength=sqrt((sX-x1)*(sX-x1)+(sY-y1)*(sY-y1));//中心との距離計算
-    mTurn = calcTurn(oLength);
+
+    printf("oLength = %lf\n",oLength);
+
+    mTurn = calcTurn(oLength)*-1;
+
+    printf("mTurn = %lf\n",mTurn);
 
    /* static char buf[256];
     sprintf(buf,"LT %2.3f, %d,%d",brightness,mTargetSpeed,mTurn);
@@ -41,7 +48,7 @@ void CurveVirtual::run()
 
 void CurveVirtual::reset()
 {
-    X0 = mX->getValue();
+    X0 = mX->getValue();//最初のストレートの方向がxの正の方向
     printf("X0 = %lf\n",X0);
     Y0 = mY->getValue();
     printf("Y0 = %lf\n",Y0);
@@ -51,15 +58,15 @@ void CurveVirtual::reset()
     rad1=rad1*M_PI/180;
    
     //中心座標の計算
-    x1 = R * cos(rad1) + X0;
+    x1 = R * sin(rad1) + X0;
     printf("x1 = %lf\n",x1);
-    y1 = R * sin(rad1) + Y0;
+    y1 = R * cos(rad1) + Y0;
     printf("y1 = %lf\n",y1);
 
 }
 
 
-double CurveVirtual::calcTurn(double val1)
+double CurveVirtual::calcTurn(double oLength)
 {
 double bai = 1.0;   //CompositeSection用？
     /*if(mSpeedControl->getCurrentSpeed()<15) {  //12
@@ -69,7 +76,7 @@ double bai = 1.0;   //CompositeSection用？
     mPid->setKi(mIFactor*bai);
     mPid->setKd(mDFactor*bai);*/
 
-    double val1_turn =  mPid->getOperation(val1);
+    double val1_turn =  mPid->getOperation(oLength);
 
   //  mPid->debug=true;
 
