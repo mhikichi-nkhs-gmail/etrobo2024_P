@@ -6,6 +6,7 @@ class WloopSectionManager : public SectionManager {
     public:
         WloopSectionManager();
         bool run();
+        void param();
 
     protected:
 

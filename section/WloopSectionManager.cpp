@@ -5,7 +5,7 @@
 
 WloopSectionManager::WloopSectionManager()
 {
-/*
+
     // test用初期化
 #if defined(MAKE_RIGHT)
       const int _EDGE = LineTracer::RIGHTEDGE;
@@ -23,7 +23,7 @@ WloopSectionManager::WloopSectionManager()
     blue0->setBlueH(204,215);
     blue0->setBlueS(0.75,0.90);
     addSection(sc0)
-    */
+    
 }
 
 bool WloopSectionManager::run()

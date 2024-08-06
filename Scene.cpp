@@ -2,6 +2,8 @@
 
 #include "ev3api.h"
 
+extern MyColorSensor *gColor;
+
 Scene::Scene():
     mState(UNDEFINED)
 {
@@ -47,9 +49,13 @@ void Scene::execMode()
    if(ev3_button_is_pressed(LEFT_BUTTON)){
         printf("左を選択\n");
         button_no = 0;
+        gColor->UpdateRgb();
+        printf("値の更新");
     }else if(ev3_button_is_pressed(RIGHT_BUTTON)){
         printf("右を選択\n");
         button_no = 1;
+        gColor->UpdateRgb();
+        printf("値の更新");
     }
 
     if((button_no == 0)||(button_no == 1)){

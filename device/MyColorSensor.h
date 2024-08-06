@@ -1,11 +1,12 @@
 #ifndef __MYCOLORSENSOR_H__
 #define __MYCOLORSENSOR_H__
-#include "MyColorSensor.h"
+
 
 #include "ColorSensor.h"
 #include "Brightness.h"
 #include "HsvHue.h"
 #include "HsvSatu.h"
+
 
 using namespace ev3api;
 
@@ -30,6 +31,7 @@ class MyColorSensor
                     HsvSatu *s);
         void update();
         void calcHSV();
+        void UpdateRgb();
         float normBrightness(float br,float min,float max);
         float normColor(float br,float min,float max);
         void getHSV(rgb_f_t rgb, hsv_t& hsv);

@@ -12,7 +12,7 @@ class SpeedSectionManager : public SectionManager {
     protected:
 
     private:
-        INFO_DATA Ldata[5]={{Section::TRACER,{LineTracer::LEFTEDGE,100,0,10,5,3},Section::LENGTH,{135}}
+        INFO_DATA Ldata[6]={{Section::TRACER,{LineTracer::LEFTEDGE,100,0,10,5,3},Section::LENGTH,{135}}
                     ,{Section::CURVEVIRTUAL,{LineTracer::LEFTEDGE,60,47,50,80,60,5,47},Section::LENGTH,{360}}
                     ,{Section::TRACER,{LineTracer::LEFTEDGE,100,0,10,5,3},Section::LENGTH,{475}}
                     ,{Section::CURVEVIRTUAL,{LineTracer::LEFTEDGE,60,0,50,80,60,5,20},Section::LENGTH,{505}}
