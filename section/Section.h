@@ -21,7 +21,8 @@ class Section {
             WALKER,
             TRACER,
             CURVEVIRTUAL,
-            STRAIGHTVIRTUAL
+            STRAIGHTVIRTUAL,
+            END
         };
 
         enum JUDGE_NO{
