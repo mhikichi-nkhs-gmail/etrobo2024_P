@@ -32,7 +32,9 @@ void CurveVirtual::run()
 
     printf("oLength = %lf\n",oLength);
 
-    mTurn = calcTurn(oLength)*-1;
+    mTurn = calcTurn(oLength);
+    if(mBias>0)
+    mTurn = -mTurn;
 
     printf("mTurn = %lf\n",mTurn);
 
@@ -61,7 +63,14 @@ void CurveVirtual::reset()
     //中心座標の計算
     x1 = -R * sin(rad1) + X0;
     printf("x1 = %lf\n",x1);
-    y1 = (R * cos(rad1) + Y0);
+    if(mBias>0)
+    {
+       y1 = (R * cos(rad1) + Y0);
+    }
+    else
+    {
+       y1 = (-R * cos(rad1) + Y0);
+    }
     printf("y1 = %lf\n",y1);
 
 }
@@ -129,7 +138,7 @@ void CurveVirtual::setData(double LineArray[])
     1.回転がほぼないときの左回り
     mTurn = calcTurn(oLength)*-1;
     rad1=(rad1)*M_PI/180;
-    x1 = -(R * sin(rad1)) + X0;
+    x1 = (-R * sin(rad1)) + X0;
     printf("x1 = %lf\n",x1);
     y1 = (R * cos(rad1) + Y0);
     printf("y1 = %lf\n",y1);
@@ -137,9 +146,9 @@ void CurveVirtual::setData(double LineArray[])
     2.回転がほぼないときの右回り
     mTurn = calcTurn(oLength);
     rad1=(rad1)*M_PI/180;
-    x1 = (R * sin(rad1) + X0);
+    x1 = (-R * sin(rad1) + X0);
     printf("x1 = %lf\n",x1);
-    y1 = -(R * cos(rad1) + Y0);
+    y1 = (-R * cos(rad1) + Y0);
     printf("y1 = %lf\n",y1);
     
     3.回転方向（一番上のrunの中にあるやつ）
