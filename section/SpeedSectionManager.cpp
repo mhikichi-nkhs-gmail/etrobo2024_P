@@ -118,12 +118,14 @@ bool SpeedSectionManager::run()
 void SpeedSectionManager::param()
 {
     int getArrayLength;
-    if(SectionManager::course == 0)
-        for(int i=0;Ldata[i].wid==4;i++){
-            getArrayLength = i;
+    if(SectionManager::course == 0){
+        for(int i=0;Ldata[i].wid!=Section::END;i++){
+            getArrayLength = i+1;
         }
-    for(int i=0;Rdata[i].wid==4;i++){
-            getArrayLength = i;
+    }else{
+        for(int i=0;Rdata[i].wid!=Section::END;i++){
+            getArrayLength = i+1;
+        }
     }
     
     printf("%f\n",getArrayLength);    
