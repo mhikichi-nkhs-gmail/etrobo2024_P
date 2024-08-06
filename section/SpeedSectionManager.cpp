@@ -119,10 +119,10 @@ void SpeedSectionManager::param()
 {
     int getArrayLength;
     if(SectionManager::course == 0)
-        for(int i=0;Ldata[i].wid==Section::END;i++){
+        for(int i=0;Ldata[i].wid==4;i++){
             getArrayLength = i;
         }
-    for(int i=0;Rdata[i].wid==Section::END;i++){
+    for(int i=0;Rdata[i].wid==4;i++){
             getArrayLength = i;
     }
     
