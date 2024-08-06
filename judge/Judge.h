@@ -4,13 +4,14 @@
 #include "Length.h"
 #include "HsvHue.h"
 #include "HsvSatu.h"
+#include "TurnAngle.h"
 
 #include "ev3api.h"
 
 extern Length *gLength;
 extern HsvHue *gHue;
 extern HsvSatu *gSatu;
-
+extern TurnAngle *gTurnAngle;
 
 class Judge
 {
@@ -25,6 +26,7 @@ class Judge
         Length *mLength;
         HsvHue *mHue;
         HsvSatu *mSatu;
+        TurnAngle *mTurnAngle;
     
 };
 #endif

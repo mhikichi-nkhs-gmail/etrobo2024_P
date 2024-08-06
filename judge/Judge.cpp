@@ -7,6 +7,7 @@ Judge::Judge()
     mLength = gLength;
     mHue = gHue;
     mSatu = gSatu;
+    mTurnAngle = gTurnAngle;
 }
 
 bool Judge::judge()

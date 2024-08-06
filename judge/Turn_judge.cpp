@@ -7,7 +7,7 @@ bool Len_judge::judge()
 {
     double tur = mTurnAngle->getValue();
    
-   if(tur > slen)
+   if(tur > sturn)
     {
         //printf("ffffffffffffff%f \n",len,"hhhhhhhhhhhhhhh%f \n",slen);
         return true;
