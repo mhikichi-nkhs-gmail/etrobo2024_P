@@ -29,7 +29,6 @@ APPL_CXXOBJS += \
 	CurveVirtual.o \
 	X_Position.o \
 	Y_Position.o \
-	WloopSectionManager.o \
 	Blue_judge.o\
 	StraightVirtual.o
 

@@ -3,7 +3,7 @@
 
 #include "SectionManager.h"
 #include "SpeedSectionManager.h"
-#include "WloopSectionManager.h"
+//#include "WloopSectionManager.h"
 #include "ev3api.h"
 #include "MyColorSensor.h"
 
@@ -32,6 +32,6 @@ class Scene{
 
         State mState;
         SpeedSectionManager *mSsm;
-        WloopSectionManager *mWsm;
+        //WloopSectionManager *mWsm;
 };
 #endif
