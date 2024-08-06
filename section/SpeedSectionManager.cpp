@@ -117,8 +117,18 @@ bool SpeedSectionManager::run()
 }
 void SpeedSectionManager::param()
 {
+    int getArrayLength;
+    if(SectionManager::course == 0)
+        for(int i=0;Ldata[i].wid==Section::END;i++){
+            getArrayLength = i;
+        }
+    for(int i=0;Rdata[i].wid==Section::END;i++){
+            getArrayLength = i;
+    }
     
-     for(int i=0;i<5;i++){
+    printf("%f\n",getArrayLength);    
+        
+     for(int i=0;i<getArrayLength;i++){
         Section *sc0 = new Section();
 
         /*Walker* walker0 = sc0->selectWalker(Section::TRACER);

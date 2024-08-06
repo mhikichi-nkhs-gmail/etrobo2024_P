@@ -71,6 +71,8 @@ Walker *Section::selectWalker(int no)
         case STRAIGHTVIRTUAL :
             mWalker = (Walker*)(new StraightVirtual(gOdo,gSpeed));
             break;
+        case END :
+            break;
         default:
             msg_log("selectWalker error!!");
     }

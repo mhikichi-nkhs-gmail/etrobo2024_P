@@ -35,3 +35,26 @@ bool WloopSectionManager::run()
 
     return false;
 }
+void WloopSectionManager::param()
+{
+    int getArrayLength;
+    if(SectionManager::course == 0)
+        for(int i=0;Ldata[i].wid==Section::END;i++){
+            getArrayLength = i;
+        }
+    for(int i=0;Rdata[i].wid==Section::END;i++){
+            getArrayLength = i;
+    }
+
+    if(SectionManager::course == 0){
+            Walker* walker0 = sc0->selectWalker(Ldata[i].wid);
+            walker0->setData(Ldata[i].param);
+            Len_judge* judge0 = (Len_judge*)sc0->selectJudge(Ldata[i].jid);
+            judge0->setData(Ldata[i].jparam);
+        }else if(SectionManager::course == 1){
+            Walker* walker0 = sc0->selectWalker(Rdata[i].wid);
+            walker0->setData(Rdata[i].param);
+            Len_judge* judge0 = (Len_judge*)sc0->selectJudge(Ldata[i].jid);
+            judge0->setData(Rdata[i].jparam);
+        }
+}
