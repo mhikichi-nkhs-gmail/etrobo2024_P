@@ -8,6 +8,7 @@ class SpeedSectionManager : public SectionManager {
         bool run();
         void param();
         int button_no;
+        int getArrayLength;
 
     protected:
 

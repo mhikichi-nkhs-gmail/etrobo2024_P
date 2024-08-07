@@ -107,7 +107,7 @@ bool SpeedSectionManager::run()
         //printf("a\n");
         mSectionIdx++;
     }
-    if(mSectionIdx>4){
+    if(mSectionIdx>getArrayLength){
         //printf("c\n");
         return true;
     }else{
@@ -117,16 +117,17 @@ bool SpeedSectionManager::run()
 }
 void SpeedSectionManager::param()
 {
-    int getArrayLength;
-    if(SectionManager::course == 0)
-        for(int i=0;Ldata[i].wid==4;i++){
-            getArrayLength = i;
+    if(SectionManager::course == 0){
+        for(int i=0;Ldata[i].wid!=Section::END;i++){
+            getArrayLength = i+1;
         }
-    for(int i=0;Rdata[i].wid==4;i++){
-            getArrayLength = i;
+    }else{
+        for(int i=0;Rdata[i].wid!=Section::END;i++){
+            getArrayLength = i+1;
+        }
     }
     
-    printf("%f\n",getArrayLength);    
+    printf("%d\n",getArrayLength);    
         
      for(int i=0;i<getArrayLength;i++){
         Section *sc0 = new Section();
