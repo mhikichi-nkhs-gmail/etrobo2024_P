@@ -55,6 +55,7 @@ private:
     bool mLeftEdge;
     double mCurve;
 
+    double rad1;
 
     double mBias;
 

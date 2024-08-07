@@ -11,6 +11,8 @@
 
 #include "util.h"
 
+#include "TurnAngle.h"
+
 const int LineTracer::LEFTEDGE = true;
 const int LineTracer::RIGHTEDGE = false;
 
@@ -34,6 +36,10 @@ void LineTracer::run()
 {
     double  brightness;
     double direction;
+
+    rad1 = mAngle->getValue();
+    printf("rad1 = %lf\n",rad1);
+
     brightness=mBright->getValue();
     mTurn = calcTurn(brightness);
 

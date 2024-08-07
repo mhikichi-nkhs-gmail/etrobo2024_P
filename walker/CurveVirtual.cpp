@@ -33,7 +33,7 @@ void CurveVirtual::run()
     printf("oLength = %lf\n",oLength);
 
     mTurn = calcTurn(oLength);
-    if(mBias>0)
+    if(J>0)
     mTurn = -mTurn;
 
     printf("mTurn = %lf\n",mTurn);
@@ -63,7 +63,7 @@ void CurveVirtual::reset()
     //中心座標の計算
     x1 = -R * sin(rad1) + X0;
     printf("x1 = %lf\n",x1);
-    if(mBias>0)
+    if(J>0)
     {
        y1 = (R * cos(rad1) + Y0);
     }
@@ -119,7 +119,9 @@ void CurveVirtual::setParam(double speed,double target,double kp, double ki, dou
    
     mBias = angleTarget;
     
-    R = angleKp;
+    R = target;
+
+    J = angleKp;
 
 }
 

@@ -28,6 +28,7 @@ private:
     double X0; //中心x座標
     double Y0; //中心y座標
     double R; //旋回半径
+    double J;
     double rad1;
     double x1;
     double y1;
