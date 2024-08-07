@@ -6,7 +6,7 @@ bool Blue_judge::judge()
     double blue1 = mHue->getValue();
     double blue2 = mSatu->getValue();
 
-    if(((blue1 >= sblueh1) && (blue1 <= sblueh2)) && ((blue2 >= sblues1) && (blue2 <= sblues2)))
+    if(((blue1 >= sblueh1) && (blue1 <= sblueh2)) && (blue2 >= sblues1))
     {
         return true;
     }
@@ -15,17 +15,21 @@ bool Blue_judge::judge()
         return false;
     }
 }
-
-void Blue_judge::setBlueH(double maxblue,double minblue)
+void Blue_judge::setData(double JudgeArray[])
 {
-    sblueh1 = maxblue;
-    sblueh2 = minblue;
+    setBlueH(JudgeArray[0],JudgeArray[1]);
+    setBlueS(JudgeArray[2]);
+}
+
+void Blue_judge::setBlueH(double minblue,double maxblue)
+{
+    sblueh1 = minblue;
+    sblueh2 = maxblue;
     //printf("ううう");
 }
 
-void Blue_judge::setBlueS(double maxblue,double minblue)
+void Blue_judge::setBlueS(double minblue)
 {
-    sblues1 = maxblue;
-    sblues2 = minblue;
+    sblues1 = minblue;
     //printf("えええ");
 }

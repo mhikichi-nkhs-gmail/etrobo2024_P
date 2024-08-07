@@ -3,6 +3,11 @@
 
 #include "LineTracer.h"
 #include "SimpleWalker.h"
+#include "Len_judge.h"
+#include "CurveVirtual.h"
+#include "Blue_judge.h"
+#include "StraightVirtual.h"
+#include "Time_judge.h"
 
 #include "Walker.h"
 #include "Judge.h"
@@ -27,7 +32,8 @@ class Section {
 
         enum JUDGE_NO{
             LENGTH,
-            BLUE
+            BLUE,
+            TIME
         };
 
     protected:

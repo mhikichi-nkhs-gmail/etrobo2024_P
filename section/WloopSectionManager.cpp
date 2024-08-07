@@ -1,8 +1,9 @@
-#include "SpeedSectionManager.h"
+#include "WloopSectionManager.h"
+#include "SectionManager.h"
 #include "Section.h"
 #include "CurveVirtual.h"
 
-SpeedSectionManager::SpeedSectionManager()
+WloopSectionManager::WloopSectionManager()
 {
 /*    // test用初期化
  #if defined(MAKE_RIGHT)
@@ -96,11 +97,11 @@ SpeedSectionManager::SpeedSectionManager()
     ction::WALKER);
     walker->setCommand(10,10);
     */
-    
-
 }
 
-bool SpeedSectionManager::run()
+
+
+bool WloopSectionManager::run()
 {
     if(mSection[mSectionIdx]->run()){
         //printf("a\n");
@@ -114,7 +115,7 @@ bool SpeedSectionManager::run()
         return false;
     }
 }
-void SpeedSectionManager::param()
+void WloopSectionManager::param()
 {
     if(SectionManager::course == 0){
         for(int i=0;Ldata[i].wid!=Section::END;i++){

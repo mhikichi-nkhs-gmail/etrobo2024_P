@@ -102,5 +102,14 @@ void SimpleWalker::resetParam()
     mSpeedControl->resetParam();
 }
 
+void SimpleWalker::setData(double SimpleArray[])
+{
+    sforward = (int)SimpleArray[0];
+    sturn = (int)SimpleArray[1];
+}
 
+void SimpleWalker::setParam(int sforword,int sturn)
+{
+    setCommand(sforword,sturn);
+}
 

@@ -132,7 +132,7 @@ void CurveVirtual::setBias(double curve)
 
 void CurveVirtual::setData(double LineArray[])
 {
-    CurveVirtual::setParam(LineArray[1],LineArray[2],LineArray[3],LineArray[4],LineArray[5],LineArray[6],LineArray[7]);
+    CurveVirtual::setParam(LineArray[0],LineArray[1],LineArray[2],LineArray[3],LineArray[4],LineArray[5],LineArray[6]);
 }
 
 

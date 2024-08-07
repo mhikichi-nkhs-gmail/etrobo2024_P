@@ -3,7 +3,7 @@
 
 
 
-bool Len_judge::judge()
+bool Turn_judge::judge()
 {
     double tur = mTurnAngle->getValue();
    

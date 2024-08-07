@@ -26,6 +26,10 @@ public:
     void setCommand(int forward, int turn);
     void setCommandV(float forward, int turn);
     void resetParam();
+    void setData(double SimpleArray[]);
+    void setParam(int sforword,int sturn);
+    int sforward;
+    int sturn;
 
 protected:
 
