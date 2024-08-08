@@ -13,6 +13,8 @@
 
 #include "TurnAngle.h"
 
+#include "TurnAngle.h"
+
 const int LineTracer::LEFTEDGE = true;
 const int LineTracer::RIGHTEDGE = false;
 
@@ -54,8 +56,10 @@ void LineTracer::run()
 }
 void LineTracer::setData(double LineArray[])
 {
-    LineTracer::setParam(LineArray[1],LineArray[2],LineArray[3],LineArray[4],LineArray[5],LineArray[6],LineArray[7]);
+    LineTracer::setParam(LineArray[1],LineArray[2],LineArray[3],LineArray[4],LineArray[5]);
     LineTracer::setEdgeMode(LineArray[0]);
+    LineTracer::setBias(LineArray[6]);
+
 }
 
    
@@ -109,6 +113,7 @@ void LineTracer::setParam(double speed,double target,double kp,double ki,double 
     mPid->setKd(mDFactor);
    
     mBias = angleTarget;
+
     
 
 }

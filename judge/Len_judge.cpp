@@ -3,6 +3,7 @@
 
 bool Len_judge::judge()
 {
+    //printf("Len_judge");
     double len = mLength->getValue();
    if(slen>=0)
     {

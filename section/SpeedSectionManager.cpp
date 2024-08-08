@@ -106,8 +106,10 @@ bool SpeedSectionManager::run()
     if(mSection[mSectionIdx]->run()){
         //printf("a\n");
         mSectionIdx++;
+        //printf("mSectionIdx%d\n",mSectionIdx);
+        //printf("getArrayLength%d\n",getArrayLength);
     }
-    if(mSectionIdx>getArrayLength){
+    if(mSectionIdx>=getArrayLength){
         //printf("c\n");
         return true;
     }else{

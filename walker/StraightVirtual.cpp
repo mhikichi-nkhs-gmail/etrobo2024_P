@@ -16,16 +16,28 @@ void StraightVirtual::run()
     nX = mX->getValue();
     nY = mY->getValue();
 
+    rad1 = mAngle->getValue();
+    printf("rad1 = %lf\n",rad1);
+    rad1=rad1*M_PI/180;
+
+    double sX=3*cos(rad1)+nX;
+    double sY=3*sin(rad1)+nY;
+
+    printf("sX = %lf\n",sX);
+    printf("sY = %lf\n",sY);
+
     double distance;//直線とのずれ
     double direction;
 
-    double distancek=(y1-Y0)*nX-(x1-X0)*nY+x1*Y0-y1*X0;
+    double distancek=(y1-Y0)*sX-(x1-X0)*sY+x1*Y0-y1*X0;
 
-    if(distancek>=0)
-    distancek=distancek*-1;
 
     distance=distancek/sqrt((x1-X0)*(x1-X0)+(y1-Y0)*(y1-Y0));
+
+    printf("distance = %lf\n",distance);
+    
     mTurn = calcTurn(distance);
+    mTurn = -mTurn;
 
    /* static char buf[256];
     sprintf(buf,"LT %2.3f, %d,%d",brightness,mTargetSpeed,mTurn);
@@ -50,9 +62,9 @@ void StraightVirtual::reset()
     rad1=rad1*M_PI/180;
    
     //中心座標の計算
-    x1 = -R * sin(rad1) + X0;
+    x1 = R * cos(rad1) + X0;
     printf("X1 = %lf\n",x1);
-    y1 = R * cos(rad1) + Y0;
+    y1 = R * sin(rad1) + Y0;
     printf("Y1 = %lf\n",y1);
 
 }

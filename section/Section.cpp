@@ -28,9 +28,7 @@ bool Section::run()
     //Judge初期化
     if(j_flag == false)
     {
-        printf("ooooo\n");
         mJudge->reset();
-        printf("ooooo\n");
 
         j_flag = true;
     }
@@ -38,9 +36,7 @@ bool Section::run()
     //Walker初期化
     if(w_flag == false)
     {
-        printf("iiiiii\n");
         mWalker->reset();
-        printf("iiiiii\n");
 
         w_flag = true;
     }
@@ -65,13 +61,13 @@ Walker *Section::selectWalker(int no)
         case TRACER:
             mWalker = (Walker*)(new LineTracer(gOdo,gSpeed));
            break;
-        case CURVEVIRTUAL :
+        case CURVEVIRTUAL:
             mWalker = (Walker*)(new CurveVirtual(gOdo,gSpeed));
             break;
-        case STRAIGHTVIRTUAL :
+        case STRAIGHTVIRTUAL:
             mWalker = (Walker*)(new StraightVirtual(gOdo,gSpeed));
             break;
-        case END :
+        case END:
             break;
         default:
             msg_log("selectWalker error!!");
