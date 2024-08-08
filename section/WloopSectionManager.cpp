@@ -103,15 +103,13 @@ WloopSectionManager::WloopSectionManager()
 
 bool WloopSectionManager::run()
 {
+    
     if(mSection[mSectionIdx]->run()){
-        //printf("a\n");
         mSectionIdx++;
     }
-    if(mSectionIdx>getArrayLength){
-        //printf("c\n");
+    if(mSectionIdx>=getArrayLength){
         return true;
     }else{
-        //printf("d\n");
         return false;
     }
 }
@@ -127,7 +125,7 @@ void WloopSectionManager::param()
         }
     }
     
-    printf("%d\n",getArrayLength);    
+    //printf("%d\n",getArrayLength);    
         
      for(int i=0;i<getArrayLength;i++){
         Section *sc0 = new Section();

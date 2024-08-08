@@ -8,7 +8,7 @@ Scene::Scene():
     mState(UNDEFINED)
 {
     mSsm = new SpeedSectionManager();
-    //mWsm = new WloopSectionManager();
+    mWsm = new WloopSectionManager();
 }
 
 bool Scene::run()
@@ -83,16 +83,20 @@ void Scene::execStart()
 }
 void Scene::execSpeed()
 {
-    if(mSsm->run()) {
+    if(mSsm->run()) 
+    {
+        printf("スピード終了\n");
         delete mSsm;
+        mWsm->param();
         mState = WLOOP;
     }
 }
 void Scene::execWloop()
 {
     //青色を感知した際に実行するところ
+    //printf("wloop突入！\n");
     if(mWsm->run()) {
-        
+        printf("終了！！！\n");
         delete mWsm;
         mState = END;
     }

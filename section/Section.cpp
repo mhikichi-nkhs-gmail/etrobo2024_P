@@ -24,9 +24,9 @@ bool Section::run()
     //Judge初期化
     if(j_flag == false)
     {
-        printf("ooooo\n");
+        //printf("ooooo\n");
         mJudge->reset();
-        printf("ooooo\n");
+        //printf("ooooo\n");
 
         j_flag = true;
     }
@@ -36,7 +36,7 @@ bool Section::run()
     {
         printf("iiiiii\n");
         mWalker->reset();
-        printf("iiiiii\n");
+        //printf("iiiiii\n");
 
         w_flag = true;
     }

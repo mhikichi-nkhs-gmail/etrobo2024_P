@@ -17,7 +17,7 @@ void CurveVirtual::run()
     nY = mY->getValue();
 
     rad2 = mAngle->getValue();
-    printf("rad2 = %lf\n",rad2);
+    //printf("rad2 = %lf\n",rad2);
     rad2=rad2*M_PI/180;
 
     double oLength;//中心との距離
@@ -56,7 +56,7 @@ void CurveVirtual::reset()
     Y0 = mY->getValue();
     printf("Y0 = %lf\n",Y0);
     rad1 = mAngle->getValue();
-    printf("rad1 = %lf\n",rad1);
+   // printf("rad1 = %lf\n",rad1);
     //度からrad変換
     rad1=(rad1)*M_PI/180;
    

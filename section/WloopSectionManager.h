@@ -13,9 +13,9 @@ class WloopSectionManager : public SectionManager {
     protected:
 
     private:
-        INFO_DATA Ldata[6]={{Section::TRACER,{LineTracer::LEFTEDGE,70,0,20,20,20},Section::BLUE,{180,300,0.75}}
-                        ,{Section::WALKER,{10,10},Section::TIME,{1}}
-                        ,{Section::TRACER,{LineTracer::LEFTEDGE,0,0,0,0,0},Section::BLUE,{180,300,0.75}}
+        INFO_DATA Ldata[3]={{Section::TRACER,{LineTracer::LEFTEDGE,70,0,5,3,4.7,0},Section::BLUE,{180,300,0.30}}
+                        ,{Section::WALKER,{0,0},Section::LENGTH,{2000}}
+                        //,{Section::TRACER,{LineTracer::RIGHTEDGE,60,0,5,3,4.5,10},Section::BLUE,{180,300,0.30}}
                         ,{Section::END}};
 
         INFO_DATA Rdata[6]={{Section::TRACER,{LineTracer::RIGHTEDGE,100,0,10,5,3},Section::LENGTH,{270}}

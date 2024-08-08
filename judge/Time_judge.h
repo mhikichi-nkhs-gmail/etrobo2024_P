@@ -10,7 +10,7 @@ class Time_judge : public Judge
         ~Time_judge();
         bool judge();
         void plustime();
-        void setData(double stime);
+        void setData(double stime[]);
         double time;
         double ftime;
 
