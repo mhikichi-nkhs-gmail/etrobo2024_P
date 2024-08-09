@@ -16,6 +16,16 @@ void StraightVirtual::run()
     nX = mX->getValue();
     nY = mY->getValue();
 
+
+    printf("nX = %lf\n",nX);
+    printf("nY = %lf\n",nY);
+    printf("X0 = %lf\n",X0);
+    printf("Y0 = %lf\n",Y0);
+    printf("X1 = %lf\n",x1);
+    printf("Y1 = %lf\n",y1);
+
+
+
     double distance;//直線とのずれ
     double direction;
 
