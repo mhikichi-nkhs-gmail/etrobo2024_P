@@ -27,7 +27,8 @@ public:
     void setCommandV(float forward, int turn);
     void resetParam();
     void setData(double SimpleArray[]);
-    void setParam(int sforword,int sturn);
+    void setParam(int sforward,int sturn);
+    void reset();
     int sforward;
     int sturn;
 

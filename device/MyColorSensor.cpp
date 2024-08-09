@@ -51,6 +51,7 @@ void MyColorSensor::update()
         mRgb.r = normColor(raw.r,mMin_R,mMax_R);
         mRgb.g = normColor(raw.g,mMin_G,mMax_G);
         mRgb.b = normColor(raw.b,mMin_B,mMax_B);
+        //printf("%d,%d,%d",raw.r,raw.g,raw.b);
         getHSV(mRgb,mHsv);
         mHue->update(mHsv.h);
         mSatu->update(mHsv.s);
@@ -74,9 +75,9 @@ void MyColorSensor::UpdateRgb()
     mMax_R  = raw.r;
     mMax_G  = raw.g;
     mMax_B  = raw.b;
-    printf("mMax_R = %lf\n",mMax_R);
-    printf("mMax_G = %lf\n",mMax_G);
-    printf("mMax_B = %lf\n",mMax_B);
+    printf("mMax_R = %ld\n",mMax_R);
+    printf("mMax_G = %ld\n",mMax_G);
+    printf("mMax_B = %ld\n",mMax_B);
 }
 
 

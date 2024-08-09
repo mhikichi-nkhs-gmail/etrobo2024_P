@@ -38,7 +38,6 @@ void LineTracer::run()
     double direction;
 
     rad1 = mAngle->getValue();
-    printf("rad1 = %lf\n",rad1);
 
     brightness=mBright->getValue();
     mTurn = calcTurn(brightness);
@@ -54,8 +53,9 @@ void LineTracer::run()
 }
 void LineTracer::setData(double LineArray[])
 {
-    LineTracer::setParam(LineArray[1],LineArray[2],LineArray[3],LineArray[4],LineArray[5],LineArray[6],LineArray[7]);
+    LineTracer::setParam(LineArray[1],LineArray[2],LineArray[3],LineArray[4],LineArray[5]);
     LineTracer::setEdgeMode(LineArray[0]);
+    LineTracer::setBias(LineArray[6]);
 }
 
    
@@ -148,6 +148,11 @@ void LineTracer::addBias(double add)
 void LineTracer::printInfo()
 {
     msg_log("LineTracer");
+}
+
+void LineTracer::reset()
+{
+    
 }
 
 

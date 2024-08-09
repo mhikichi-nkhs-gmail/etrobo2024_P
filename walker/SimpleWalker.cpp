@@ -38,6 +38,7 @@ void SimpleWalker::run() {
 
     float pwm_l = mForward + mTurn;      // <2>
     float pwm_r = mForward - mTurn;      // <2>
+    printf("%f,%f",pwm_l,pwm_r);
     //モーター
     static const int MAXPWM=100;
     int diff = 0;
@@ -74,6 +75,7 @@ void SimpleWalker::run() {
  * @param turn    旋回値
  */
 void SimpleWalker::setCommand(int forward, int turn) {
+    printf("setCommand%d\n",forward);
     mForward = forward;
     mSpeedControl->resetParam();
     mSpeedControl->setTargetSpeed(forward);
@@ -104,12 +106,22 @@ void SimpleWalker::resetParam()
 
 void SimpleWalker::setData(double SimpleArray[])
 {
-    sforward = (int)SimpleArray[0];
-    sturn = (int)SimpleArray[1];
+    printf("Simple%f\n",SimpleArray[0]);
+    printf("aa%f\n",SimpleArray[1]);
+    sforward = static_cast<int>(SimpleArray[0]);
+    sturn = static_cast<int>(SimpleArray[1]);
+    SimpleWalker::setParam(sforward,sturn);
 }
 
-void SimpleWalker::setParam(int sforword,int sturn)
+void SimpleWalker::setParam(int sforward,int sturn)
 {
-    setCommand(sforword,sturn);
+    printf("Simple2%d\n",sforward);
+    printf("bb%d\n",sturn);
 }
 
+void SimpleWalker::reset()
+{
+    printf("%d,%d,%f,%d\n",sforward,sturn,mForward,mTurn);
+    mSpeedControl->resetParam();
+    SimpleWalker::setCommand(sforward,sturn);
+}

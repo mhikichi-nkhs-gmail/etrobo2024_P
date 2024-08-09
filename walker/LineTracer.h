@@ -20,7 +20,7 @@ public:
             SpeedControl *scon);
     void run();
     void setData(double LineArray[]);
-
+    void reset();
     void setParam(double speed,double target,double kp,double ki,double kd);
     void setParam(double speed,double target,double kp,double ki,double kd,double angleTarget,double angleKp);
                        

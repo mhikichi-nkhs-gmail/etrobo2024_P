@@ -13,11 +13,22 @@ class SpeedSectionManager : public SectionManager {
     protected:
 
     private:
-        INFO_DATA Ldata[6]={{Section::TRACER,{LineTracer::LEFTEDGE,100,0,10,5,3},Section::LENGTH,{135}}
-                    ,{Section::CURVEVIRTUAL,{LineTracer::LEFTEDGE,60,47,50,80,60,5,47},Section::LENGTH,{360}}
-                    ,{Section::TRACER,{LineTracer::LEFTEDGE,100,0,10,5,3},Section::LENGTH,{475}}
-                    ,{Section::CURVEVIRTUAL,{LineTracer::LEFTEDGE,60,0,50,80,60,5,20},Section::LENGTH,{505}}
-                    ,{Section::TRACER,{LineTracer::LEFTEDGE,100,0,10,5,3},Section::LENGTH,{550}}
+        INFO_DATA /*Ldata[6]={{Section::WALKER,{50,0},Section::LENGTH,{290}}
+                    ,{Section::WALKER,{100,0},Section::LENGTH,{329}}
+                    ,{Section::WALKER,{50,0},Section::LENGTH,{515}}
+                    ,{Section::WALKER,{100,0},Section::LENGTH,{543}}
+                    ,{Section::WALKER,{0,0},Section::LENGTH,{600}}
+                    ,{Section::END}};*/
+        
+        
+        
+        
+        
+        Ldata[6]={{Section::TRACER,{LineTracer::LEFTEDGE,100,0,7,6,6,0},Section::LENGTH,{290}}
+                    ,{Section::TRACER,{LineTracer::LEFTEDGE,65,0,7,6,10,35},Section::LENGTH,{329}}
+                    ,{Section::TRACER,{LineTracer::LEFTEDGE,100,0,7,6,8,0},Section::LENGTH,{515}}
+                    ,{Section::TRACER,{LineTracer::LEFTEDGE,65,0,7,6,8,35},Section::LENGTH,{543}}
+                    ,{Section::TRACER,{LineTracer::LEFTEDGE,100,0,7,6,8,0},Section::LENGTH,{600}}
                     ,{Section::END}};
 
         INFO_DATA Rdata[6]={{Section::TRACER,{LineTracer::RIGHTEDGE,100,0,10,5,3},Section::LENGTH,{270}}
