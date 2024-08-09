@@ -7,6 +7,7 @@ extern MyColorSensor *gColor;
 Scene::Scene():
     mState(UNDEFINED)
 {
+    //printf("しんだい\n");
     mSsm = new SpeedSectionManager();
     mWsm = new WloopSectionManager();
 }

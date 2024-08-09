@@ -13,30 +13,53 @@ class SpeedSectionManager : public SectionManager {
     protected:
 
     private:
-        INFO_DATA /*Ldata[6]={{Section::WALKER,{50,0},Section::LENGTH,{290}}
-                    ,{Section::WALKER,{100,0},Section::LENGTH,{329}}
-                    ,{Section::WALKER,{50,0},Section::LENGTH,{515}}
-                    ,{Section::WALKER,{100,0},Section::LENGTH,{543}}
-                    ,{Section::WALKER,{0,0},Section::LENGTH,{600}}
-                    ,{Section::END}};*/
-        
-        
-        
-        
-        
-        Ldata[6]={{Section::TRACER,{LineTracer::LEFTEDGE,100,0,7,6,6,0},Section::LENGTH,{290}}
-                    ,{Section::TRACER,{LineTracer::LEFTEDGE,65,0,7,6,10,35},Section::LENGTH,{329}}
-                    ,{Section::TRACER,{LineTracer::LEFTEDGE,100,0,7,6,8,0},Section::LENGTH,{515}}
-                    ,{Section::TRACER,{LineTracer::LEFTEDGE,65,0,7,6,8,35},Section::LENGTH,{543}}
-                    ,{Section::TRACER,{LineTracer::LEFTEDGE,100,0,7,6,8,0},Section::LENGTH,{600}}
+        INFO_DATA Ldata[11]={{Section::TRACER,{LineTracer::LEFTEDGE,100,0,5,6,4.7,3},Section::LENGTH,{300}}
+                     //{Section::STRAIGHTVIRTUAL,{LineTracer::LEFTEDGE,100,1,10,5,3,5,1},Section::LENGTH,{3050}}
+                    ,//{Section::CURVEVIRTUAL,{60,47,50,80,60,5,47},Section::LENGTH,{770}}
+                     //{Section::TRACER,{LineTracer::LEFTEDGE,10,0,10,5,3},Section::LENGTH,{180}}
+                    {Section::TRACER,{LineTracer::LEFTEDGE,60,0,5,6,4.7,30},Section::LENGTH,{325}}
+                    ,//{Section::STRAIGHTVIRTUAL,{LineTracer::LEFTEDGE,60,1,50,80,60,5,1},Section::LENGTH,{885}}
+                     {Section::TRACER,{LineTracer::LEFTEDGE,100,0,5,6,4.7,0},Section::LENGTH,{520}}
+                    ,{Section::TRACER,{LineTracer::LEFTEDGE,60,0,5,6,4.7,30},Section::LENGTH,{545}}
+                    ,{Section::TRACER,{LineTracer::LEFTEDGE,30,0,5,6,4.7,0},Section::LENGTH,{675}}
+                    ,{Section::CURVEVIRTUAL,{60,39,50,50,37,2.5,-50,0},Section::LENGTH,{795}}//,100,1,10,5,3,5,1
+                    //{Section::TRACER,{LineTracer::LEFTEDGE,1,0,10,5,3},Section::LENGTH,{6000}}
+                    ,{Section::STRAIGHTVIRTUAL,{LineTracer::LEFTEDGE,60,1,50,80,60,5,1},Section::LENGTH,{890}}
+                    ,{Section::CURVEVIRTUAL,{60,25,50,80,60,5,25,0},Section::LENGTH,{1025}}
+                    ,{Section::STRAIGHTVIRTUAL,{LineTracer::LEFTEDGE,60,1,50,80,60,5,1},Section::LENGTH,{1080}}
+                    //,{Section::CURVEVIRTUAL,{60,30,50,80,60,5,-30,0},Section::LENGTH,{1160}}*/
+                    ,{Section::TRACER,{LineTracer::LEFTEDGE,1,0,5,3,4.7,0},Section::LENGTH,{6400}}
                     ,{Section::END}};
 
-        INFO_DATA Rdata[6]={{Section::TRACER,{LineTracer::RIGHTEDGE,100,0,10,5,3},Section::LENGTH,{270}}
+        INFO_DATA Rdata[8]={{Section::TRACER,{LineTracer::RIGHTEDGE,100,0,5,6,4.7,5},Section::LENGTH,{300}}
+                     //{Section::STRAIGHTVIRTUAL,{LineTracer::RIGHTEDGE,100,1,10,5,3,5,1},Section::LENGTH,{3050}}
+                    ,//{Section::CURVEVIRTUAL,{60,47,50,80,60,5,47},Section::LENGTH,{770}}
+                     //{Section::TRACER,{LineTracer::RIGHTEDGE,10,0,10,5,3},Section::LENGTH,{180}}
+                    {Section::TRACER,{LineTracer::RIGHTEDGE,60,0,5,6,4.7,-30},Section::LENGTH,{325}}
+                    ,//{Section::STRAIGHTVIRTUAL,{LineTracer::RIGHTEDGE,60,1,50,80,60,5,1},Section::LENGTH,{885}}
+                     {Section::TRACER,{LineTracer::RIGHTEDGE,100,0,5,6,4.7,0},Section::LENGTH,{520}}
+                    ,{Section::TRACER,{LineTracer::RIGHTEDGE,60,0,5,6,4.7,-30},Section::LENGTH,{545}}
+                    ,{Section::TRACER,{LineTracer::RIGHTEDGE,60,0,5,6,4.7,0},Section::LENGTH,{655}}
+                    ,{Section::CURVEVIRTUAL,{60,45,50,80,60,2.5,45},Section::LENGTH,{792}}//,100,1,10,5,3,5,1
+                    /*,//{Section::TRACER,{LineTracer::RIGHTEDGE,1,0,10,5,3},Section::LENGTH,{6000}}
+                     {Section::STRAIGHTVIRTUAL,{LineTracer::RIGHTEDGE,60,1,50,80,60,5,1},Section::LENGTH,{850}}
+                    ,{Section::CURVEVIRTUAL,{60,40,50,80,60,5,40},Section::LENGTH,{1040}}
+                    ,{Section::STRAIGHTVIRTUAL,{LineTracer::RIGHTEDGE,60,1,50,80,60,5,1},Section::LENGTH,{1110}}
+                    ,{Section::CURVEVIRTUAL,{60,30,50,80,60,5,-30},Section::LENGTH,{1160}}*/
+                    ,{Section::TRACER,{LineTracer::RIGHTEDGE,1,0,5,3,4.7,0},Section::LENGTH,{6400}}
+                    ,{Section::END}};
+        
+        
+        
+        
+        
+        
+        /*{{Section::TRACER,{LineTracer::RIGHTEDGE,100,0,10,5,3},Section::LENGTH,{270}}
                     ,{Section::TRACER,{LineTracer::RIGHTEDGE,60,0,50,80,60},Section::LENGTH,{305}}
                     ,{Section::TRACER,{LineTracer::RIGHTEDGE,100,0,10,5,3},Section::LENGTH,{475}}
                     ,{Section::TRACER,{LineTracer::RIGHTEDGE,60,0,50,80,60},Section::LENGTH,{505}}
                     ,{Section::TRACER,{LineTracer::RIGHTEDGE,100,0,10,5,3},Section::LENGTH,{550}}
-                    ,{Section::END}};
+                    ,{Section::END}};*/
 
 };
 

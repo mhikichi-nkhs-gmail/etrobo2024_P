@@ -5,7 +5,7 @@ SpeedControl::SpeedControl(Odometry *odo,Velocity *v):
     mVelo(v),
     mForward(0),
     mCurrentSpeed(0.0),
-    mMode_flag(true),
+    mMode_flag(false),
     mBreake_flag(false)
 {
     mPid = new PID(0.1);
@@ -58,6 +58,7 @@ int SpeedControl::getPwm()
     if(!mMode_flag) {
 	    //ev3_speaker_play_tone(NOTE_F4,50);
         mForward = mTargetSpeed;
+        printf("mForward = %d\n",mForward);
         return mTargetSpeed;
     }
     //停止モード

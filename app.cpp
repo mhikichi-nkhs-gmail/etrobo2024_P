@@ -59,7 +59,6 @@ static void user_system_create() {
   gBrightness = new Brightness();
   gHue = new HsvHue();
   gSatu = new HsvSatu();
-
   gColor = new MyColorSensor(PORT_2,gBrightness,gHue,gSatu);
   gLength = new Length();
   gTurnAngle = new TurnAngle();
@@ -74,7 +73,7 @@ static void user_system_create() {
 
   gScene = new Scene();
   gCurveVirtual = new CurveVirtual(gOdo,gSpeed);
-
+  //printf("あああ\n");
 }
 static void user_system_destroy() {
 

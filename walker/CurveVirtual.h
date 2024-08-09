@@ -16,7 +16,7 @@ public:
     void reset();
     double calcTurn(double val1);
     void setParam(double speed,double target,double kp, double ki, double kd,
-                        double angleTarget,double angleKp);
+                        double angleTarget,double angleKp,double adangle);
 
     void setBias(double curve);
 
@@ -25,13 +25,14 @@ public:
 private:
     double nX;
     double nY;
-    double X0; //中心x座標
-    double Y0; //中心y座標
+    double X0; 
+    double Y0; 
     double R; //旋回半径
     double J;
+    double AA;
     double rad1;
-    double x1;
-    double y1;
+    double x1; //中心x座標
+    double y1; //中心y座標
     double rad2;
     
 

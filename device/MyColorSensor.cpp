@@ -75,9 +75,9 @@ void MyColorSensor::UpdateRgb()
     mMax_R  = raw.r;
     mMax_G  = raw.g;
     mMax_B  = raw.b;
-    printf("mMax_R = %ld\n",mMax_R);
-    printf("mMax_G = %ld\n",mMax_G);
-    printf("mMax_B = %ld\n",mMax_B);
+    printf("mMax_R = %d\n",mMax_R);
+    printf("mMax_G = %d\n",mMax_G);
+    printf("mMax_B = %d\n",mMax_B);
 }
 
 

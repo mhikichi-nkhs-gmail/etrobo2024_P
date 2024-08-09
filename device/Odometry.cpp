@@ -88,6 +88,8 @@ void Odometry::calc()
 
 	mLength->update(sumlen);
 	mTurnAngle->update(th);
+	double o = th*180/3.14159265358979323846;
+	//printf("o = %f\n",o);
 	mX_odo->update(x);
 	//printf("x = %lf\n",x);
 	mY_odo->update(y);

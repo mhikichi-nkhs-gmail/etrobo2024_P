@@ -13,6 +13,8 @@
 
 #include "TurnAngle.h"
 
+#include "TurnAngle.h"
+
 const int LineTracer::LEFTEDGE = true;
 const int LineTracer::RIGHTEDGE = false;
 
@@ -109,6 +111,7 @@ void LineTracer::setParam(double speed,double target,double kp,double ki,double 
     mPid->setKd(mDFactor);
    
     mBias = angleTarget;
+
     
 
 }
