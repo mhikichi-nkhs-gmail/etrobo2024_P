@@ -16,8 +16,13 @@ void CurveVirtual::run()
     nX = mX->getValue();//現在の座標
     nY = mY->getValue();
 
+    nX = nX-X0;
+    nY = nY-Y0;
+
     rad2 = mAngle->getValue();
-    //printf("rad2 = %lf\n",rad2);
+    //printf("rad1 = %lf\n",rad1);
+    printf("rad2 = %lf\n",rad2);
+    rad2=rad2-rad1;
     rad2=rad2*M_PI/180;
 
     double oLength;//中心との距離
@@ -26,12 +31,12 @@ void CurveVirtual::run()
     double sX=3*cos(rad2)+nX;
     double sY=3*sin(rad2)+nY;
 
-    //printf("sX = %lf\n",sX);
-    //printf("sY = %lf\n",sY);
+    printf("sX = %lf\n",sX);
+    printf("sY = %lf\n",sY);
 
     oLength=sqrt((sX-x1)*(sX-x1)+(sY-y1)*(sY-y1));//中心との距離計算
 
-    //printf("oLength = %lf\n",oLength);
+    printf("oLength = %lf\n",oLength);
 
     mTurn = calcTurn(oLength);
     if(J>0)
@@ -57,21 +62,23 @@ void CurveVirtual::reset()
     Y0 = mY->getValue();
     printf("Y0 = %lf\n",Y0);
     rad1 = mAngle->getValue();
-   // printf("rad1 = %lf\n",rad1);
+    rad1 =rad1+AA;
+    printf("rad1 = %lf\n",rad1);
     //度からrad変換
     rad1=(rad1)*M_PI/180;
    
+    
     //中心座標の計算
     
     if(J>0)
     {
-       x1 = -R * sin(rad1) + X0; 
-       y1 = (R * cos(rad1) + Y0);
+       x1 = -R * sin(rad1) ; //+X0
+       y1 = (R * cos(rad1) );//+Y0
     }
     else
     {
-       x1 = R * sin(rad1) + X0; 
-       y1 = (-R * cos(rad1) + Y0);
+       x1 = R * sin(rad1) ; //+X0
+       y1 = (-R * cos(rad1) );//+ Y0
     }
     printf("x1 = %lf\n",x1);
     printf("y1 = %lf\n",y1);
