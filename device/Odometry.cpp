@@ -36,9 +36,13 @@ Odometry::Odometry(Motor *left, Motor *right,
 
 void Odometry::reset() 
 {
+	//printf("a\n");
 	resetLength();
+	//printf("b\n");
 	resetAngle();
-
+    // mLeftMotor->reset();
+	// mRightMotor->reset();
+	//printf("c\n");
 }
 void Odometry::resetLength()
 {

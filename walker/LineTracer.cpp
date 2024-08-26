@@ -155,7 +155,7 @@ void LineTracer::printInfo()
 
 void LineTracer::reset()
 {
-    
+     mSpeedControl->setTargetSpeed(mTargetSpeed);
 }
 
 

@@ -35,7 +35,7 @@ void SimpleWalker::run() {
     static float speed=0;
 
     mForward = mSpeedControl->getPwm();
-    printf("mForward = %d\n",mForward);
+    //printf("mForward = %f\n",mForward);
 
     float pwm_l = mForward + mTurn;      // <2>
     float pwm_r = mForward - mTurn;      // <2>
@@ -76,7 +76,7 @@ void SimpleWalker::run() {
  * @param turn    旋回値
  */
 void SimpleWalker::setCommand(int forward, int turn) {
-    printf("setCommand%d\n",forward);
+    //printf("setCommand%d\n",forward);
     mForward = forward;
     mSpeedControl->resetParam();
     mSpeedControl->setTargetSpeed(forward);
@@ -97,7 +97,7 @@ void SimpleWalker::setCommandV(float forward, int turn)
         mForward=0;
     }
     mTurn    = turn;
-    mSpeedControl->setMode(true);
+    //mSpeedControl->setMode(true);
 }
 
 void SimpleWalker::resetParam()

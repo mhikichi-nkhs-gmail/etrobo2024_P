@@ -13,22 +13,30 @@ class SpeedSectionManager : public SectionManager {
     protected:
 
     private:
-        INFO_DATA Ldata[11]={{Section::TRACER,{LineTracer::LEFTEDGE,100,0,5,6,4.7,3},Section::LENGTH,{300}}
-                     //{Section::STRAIGHTVIRTUAL,{LineTracer::LEFTEDGE,100,1,10,5,3,5,1},Section::LENGTH,{3050}}
+        INFO_DATA Ldata[14]={{Section::TRACER,{LineTracer::LEFTEDGE,80,0,8,16,8,3},Section::LENGTH,{300}}
+                     //{Section::STRAIGHTVIRTUAL,{LineTracer::LEFTEDGE,60,1,8,16,8,1,1},Section::LENGTH,{100}}
                     ,//{Section::CURVEVIRTUAL,{60,47,50,80,60,5,47},Section::LENGTH,{770}}
                      //{Section::TRACER,{LineTracer::LEFTEDGE,10,0,10,5,3},Section::LENGTH,{180}}
-                    {Section::TRACER,{LineTracer::LEFTEDGE,60,0,5,6,4.7,30},Section::LENGTH,{325}}
+                    {Section::TRACER,{LineTracer::LEFTEDGE,60,0,5,6,4.7,25},Section::LENGTH,{325}}
                     ,//{Section::STRAIGHTVIRTUAL,{LineTracer::LEFTEDGE,60,1,50,80,60,5,1},Section::LENGTH,{885}}
-                     {Section::TRACER,{LineTracer::LEFTEDGE,100,0,5,6,4.7,0},Section::LENGTH,{520}}
-                    ,{Section::TRACER,{LineTracer::LEFTEDGE,60,0,5,6,4.7,30},Section::LENGTH,{545}}
-                    ,{Section::TRACER,{LineTracer::LEFTEDGE,30,0,5,6,4.7,0},Section::LENGTH,{675}}
-                    ,{Section::CURVEVIRTUAL,{60,39,50,50,37,2.5,-50,0},Section::LENGTH,{795}}//,100,1,10,5,3,5,1
-                    //{Section::TRACER,{LineTracer::LEFTEDGE,1,0,10,5,3},Section::LENGTH,{6000}}
-                    ,{Section::STRAIGHTVIRTUAL,{LineTracer::LEFTEDGE,60,1,50,80,60,5,1},Section::LENGTH,{890}}
-                    ,{Section::CURVEVIRTUAL,{60,25,50,80,60,5,25,0},Section::LENGTH,{1025}}
-                    ,{Section::STRAIGHTVIRTUAL,{LineTracer::LEFTEDGE,60,1,50,80,60,5,1},Section::LENGTH,{1080}}
+                     {Section::TRACER,{LineTracer::LEFTEDGE,80,0,8,16,8,3},Section::LENGTH,{520}}
+                    ,{Section::TRACER,{LineTracer::LEFTEDGE,60,0,5,6,4.7,25},Section::LENGTH,{545}}
+                    ,{Section::TRACER,{LineTracer::LEFTEDGE,60,0,8,16,8,3},Section::LENGTH,{630}}//60
+                    ,//{Section::TRACER,{LineTracer::RIGHTEDGE,45,0,8,16,8,6},Section::LENGTH,{655}}
+                     {Section::STRAIGHTVIRTUAL,{LineTracer::RIGHTEDGE,45,0,8,16,8,1,0},Section::LENGTH,{650}}
+                    ,//{Section::CURVEVIRTUAL,{60,39,50,50,37,2.5,-50,0},Section::LENGTH,{780}}//,100,1,10,5,3,5,1
+                    {Section::TRACER,{LineTracer::RIGHTEDGE,60,0,5,22.5,4.7,15},Section::LENGTH,{823}}//45
+                    ,{Section::STRAIGHTVIRTUAL,{LineTracer::LEFTEDGE,60,0,8,16,8,-5},Section::LENGTH,{848}}//40
+                    //,{Section::TRACER,{LineTracer::LEFTEDGE,40,0,8,16,8,3},Section::LENGTH,{863}}
+                    ,{Section::CURVEVIRTUAL,{60,10,5,22.5,4.7,5,10,0},Section::LENGTH,{855}}//45
+                    // {Section::TRACER,{LineTracer::LEFTEDGE,4,0,5,22.5,4.7,0},Section::LENGTH,{1073}}
+                    ,//{Section::STRAIGHTVIRTUAL,{LineTracer::LEFTEDGE,5,1,50,80,60,5,1},Section::LENGTH,{1093}}
+                    {Section::TRACER,{LineTracer::LEFTEDGE,70,0,8,16,8,-5},Section::LENGTH,{950}}
                     //,{Section::CURVEVIRTUAL,{60,30,50,80,60,5,-30,0},Section::LENGTH,{1160}}*/
-                    ,{Section::TRACER,{LineTracer::LEFTEDGE,1,0,5,3,4.7,0},Section::LENGTH,{6400}}
+                    ,{Section::TRACER,{LineTracer::LEFTEDGE,70,0,16,32,16,-10},Section::LENGTH,{1100}}
+                    //{Section::CURVEVIRTUAL,{45,15,5,22.5,4.7,5,15,0},Section::LENGTH,{983}}
+                    ,{Section::TRACER,{LineTracer::RIGHTEDGE,60,1,8,16,8,3},Section::LENGTH,{1200}}//45
+                    ,{Section::TRACER,{LineTracer::LEFTEDGE,70,0,8,16,8,3},Section::LENGTH,{10003}}//45
                     ,{Section::END}};
 
         INFO_DATA Rdata[8]={{Section::TRACER,{LineTracer::RIGHTEDGE,100,0,5,6,4.7,5},Section::LENGTH,{300}}
@@ -66,44 +74,31 @@ class SpeedSectionManager : public SectionManager {
 #endif
 
 /*
-
-#ifndef _SPEED_SECTION_MANAGER_H_
-#define _SPEED_SECTION_MANAGER_H_
-#include "SectionManager.h"
-
-class SpeedSectionManager : public SectionManager {
-    public:
-        SpeedSectionManager();
-        bool run();
-        void param();
-        int button_no;
-
-    protected:
-
-    private:
-        INFO_DATA Ldata[8]={{Section::TRACER,{LineTracer::LEFTEDGE,10,0,10,5,3},Section::LENGTH,{15}}//303
-                     ,//{Section::STRAIGHTVIRTUAL,{LineTracer::LEFTEDGE,100,300,10,5,3,5,300},Section::LENGTH,{3050}}
-                     {Section::CURVEVIRTUAL,{LineTracer::LEFTEDGE,60,44,50,80,60,5,44},Section::LENGTH,{3050}}
-                     //{Section::TRACER,{LineTracer::LEFTEDGE,60,0,50,80,60},Section::LENGTH,{350}}
-                    ,{Section::TRACER,{LineTracer::LEFTEDGE,100,0,10,5,3},Section::LENGTH,{520}}
-                    ,//{Section::CURVEVIRTUAL,{LineTracer::LEFTEDGE,60,0,50,80,60,5,20},Section::LENGTH,{505}}
-                     {Section::TRACER,{LineTracer::LEFTEDGE,60,0,50,80,60},Section::LENGTH,{570}}
-                    ,{Section::TRACER,{LineTracer::LEFTEDGE,100,0,10,5,3},Section::LENGTH,{644}}
-                    ,//{Section::CURVEVIRTUAL,{LineTracer::LEFTEDGE,60,44,50,80,60,5,44},Section::LENGTH,{782}}
-                    {Section::TRACER,{LineTracer::LEFTEDGE,60,0,50,80,60},Section::LENGTH,{812}}
-                    ,{Section::TRACER,{LineTracer::LEFTEDGE,100,0,10,5,3},Section::LENGTH,{644}}
-                    ,{Section::TRACER,{LineTracer::LEFTEDGE,60,0,50,80,60},Section::LENGTH,{8120}}
-                    }
-                    ;
-
-        INFO_DATA Rdata[5]={{Section::TRACER,{LineTracer::RIGHTEDGE,100,0,10,5,3},Section::LENGTH,{270}}
-                    ,{Section::TRACER,{LineTracer::RIGHTEDGE,60,0,50,80,60},Section::LENGTH,{305}}
-                    ,{Section::TRACER,{LineTracer::RIGHTEDGE,100,0,10,5,3},Section::LENGTH,{475}}
-                    ,{Section::TRACER,{LineTracer::RIGHTEDGE,60,0,50,80,60},Section::LENGTH,{505}}
-                    ,{Section::TRACER,{LineTracer::RIGHTEDGE,100,0,10,5,3},Section::LENGTH,{550}}};
-
-};
-
-#endif
+8100~8000
+INFO_DATA Ldata[14]={{Section::TRACER,{LineTracer::LEFTEDGE,80,0,8,16,8,3},Section::LENGTH,{300}}
+                     //{Section::STRAIGHTVIRTUAL,{LineTracer::LEFTEDGE,60,1,8,16,8,1,1},Section::LENGTH,{100}}
+                    ,//{Section::CURVEVIRTUAL,{60,47,50,80,60,5,47},Section::LENGTH,{770}}
+                     //{Section::TRACER,{LineTracer::LEFTEDGE,10,0,10,5,3},Section::LENGTH,{180}}
+                    {Section::TRACER,{LineTracer::LEFTEDGE,60,0,5,6,4.7,25},Section::LENGTH,{325}}
+                    ,//{Section::STRAIGHTVIRTUAL,{LineTracer::LEFTEDGE,60,1,50,80,60,5,1},Section::LENGTH,{885}}
+                     {Section::TRACER,{LineTracer::LEFTEDGE,80,0,8,16,8,3},Section::LENGTH,{520}}
+                    ,{Section::TRACER,{LineTracer::LEFTEDGE,60,0,5,6,4.7,25},Section::LENGTH,{545}}
+                    ,{Section::TRACER,{LineTracer::LEFTEDGE,60,0,8,16,8,3},Section::LENGTH,{630}}//60
+                    ,//{Section::TRACER,{LineTracer::RIGHTEDGE,45,0,8,16,8,6},Section::LENGTH,{655}}
+                     {Section::STRAIGHTVIRTUAL,{LineTracer::RIGHTEDGE,45,0,8,16,8,1,0},Section::LENGTH,{650}}
+                    ,//{Section::CURVEVIRTUAL,{60,39,50,50,37,2.5,-50,0},Section::LENGTH,{780}}//,100,1,10,5,3,5,1
+                    {Section::TRACER,{LineTracer::RIGHTEDGE,60,0,5,22.5,4.7,15},Section::LENGTH,{823}}//45
+                    ,{Section::STRAIGHTVIRTUAL,{LineTracer::LEFTEDGE,60,0,8,16,8,-5},Section::LENGTH,{848}}//40
+                    //,{Section::TRACER,{LineTracer::LEFTEDGE,40,0,8,16,8,3},Section::LENGTH,{863}}
+                    ,{Section::CURVEVIRTUAL,{60,10,5,22.5,4.7,5,10,0},Section::LENGTH,{855}}//45
+                    // {Section::TRACER,{LineTracer::LEFTEDGE,4,0,5,22.5,4.7,0},Section::LENGTH,{1073}}
+                    ,//{Section::STRAIGHTVIRTUAL,{LineTracer::LEFTEDGE,5,1,50,80,60,5,1},Section::LENGTH,{1093}}
+                    {Section::TRACER,{LineTracer::LEFTEDGE,70,0,8,16,8,-5},Section::LENGTH,{950}}
+                    //,{Section::CURVEVIRTUAL,{60,30,50,80,60,5,-30,0},Section::LENGTH,{1160}}*/
+                    /*,{Section::TRACER,{LineTracer::LEFTEDGE,70,0,16,32,16,-10},Section::LENGTH,{1100}}
+                    //{Section::CURVEVIRTUAL,{45,15,5,22.5,4.7,5,15,0},Section::LENGTH,{983}}
+                    ,{Section::TRACER,{LineTracer::RIGHTEDGE,60,1,8,16,8,3},Section::LENGTH,{1200}}//45
+                    ,{Section::TRACER,{LineTracer::LEFTEDGE,70,0,8,16,8,3},Section::LENGTH,{10003}}//45
+                    ,{Section::END}};
 
 */

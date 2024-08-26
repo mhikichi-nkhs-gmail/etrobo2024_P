@@ -33,5 +33,6 @@ class Scene{
         State mState;
         SpeedSectionManager *mSsm;
         WloopSectionManager *mWsm;
+        Odometry *gOdo;
 };
 #endif
