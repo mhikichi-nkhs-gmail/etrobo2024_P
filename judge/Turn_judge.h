@@ -8,10 +8,11 @@ class Turn_judge : public Judge
 {
     public:
         bool judge();
-        void setTurnAngle(double setLen);
+        void setTurnAngle(double setturn);
         void setData(double JudgeArray[]);
         double setTurnAngle;
         double sturn;
+        double turn;
 
     protected:   
 

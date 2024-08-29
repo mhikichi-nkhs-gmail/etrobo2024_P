@@ -5,9 +5,9 @@
 
 bool Turn_judge::judge()
 {
-    double tur = mTurnAngle->getValue();
+    turn = mTurnAngle->getValue();
    
-   if(tur > sturn)
+   if(turn > sturn)
     {
         //printf("ffffffffffffff%f \n",len,"hhhhhhhhhhhhhhh%f \n",slen);
         return true;
@@ -18,10 +18,9 @@ bool Turn_judge::judge()
     }
 }
 
-void Turn_judge::setTurnAngle(double turn)
+void Turn_judge::setTurnAngle(double setturn)
 {
     sturn = setturn;
-    //printf("slen%f \n",slen);
 }
 
 void Turn_judge::setData(double JudgeArray[])
