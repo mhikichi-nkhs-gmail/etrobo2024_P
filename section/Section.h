@@ -8,6 +8,7 @@
 #include "Blue_judge.h"
 #include "StraightVirtual.h"
 #include "Time_judge.h"
+#include "Turn_judge.h"
 
 #include "Walker.h"
 #include "Judge.h"
@@ -33,7 +34,8 @@ class Section {
         enum JUDGE_NO{
             LENGTH,
             BLUE,
-            TIME
+            TIME,
+            TURN
         };
 
     protected:

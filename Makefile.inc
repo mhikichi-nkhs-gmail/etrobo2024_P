@@ -32,7 +32,9 @@ APPL_CXXOBJS += \
 	Y_Position.o \
 	Blue_judge.o\
 	StraightVirtual.o\
-	Time_judge.o
+	Time_judge.o\
+	Turn_judge.o\
+	DevSectionManager.o
 
 SRCLANG := c++
 

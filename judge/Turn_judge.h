@@ -3,6 +3,7 @@
 
 #include "Odometry.h"
 #include "Judge.h"
+#include "cmath"
 
 class Turn_judge : public Judge
 {
@@ -10,7 +11,6 @@ class Turn_judge : public Judge
         bool judge();
         void setTurnAngle(double setturn);
         void setData(double JudgeArray[]);
-        double setTurnAngle;
         double sturn;
         double turn;
 

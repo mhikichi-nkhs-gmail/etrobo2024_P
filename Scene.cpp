@@ -13,6 +13,7 @@ Scene::Scene():
     //printf("しんだい\n");
     mSsm = new SpeedSectionManager();
     mWsm = new WloopSectionManager();
+    mDsm = new DevSectionManager();
 }
 
 bool Scene::run()
@@ -32,6 +33,9 @@ bool Scene::run()
             break;
         case WLOOP:
             execWloop();
+            break;
+        case DEV:
+            execDev();
             break;
         case GARAGE:
             execGarage();
@@ -106,6 +110,13 @@ void Scene::execWloop()
     if(mWsm->run()) {
         printf("終了！！！\n");
         delete mWsm;
+        mState = DEV;
+    }
+}
+void Scene::execDev()
+{
+    if(mDsm->run()) {
+        delete mDsm;
         mState = END;
     }
 }

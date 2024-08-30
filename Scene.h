@@ -4,6 +4,7 @@
 #include "SectionManager.h"
 #include "SpeedSectionManager.h"
 #include "WloopSectionManager.h"
+#include "DevSectionManager.h"
 #include "ev3api.h"
 #include "MyColorSensor.h"
 
@@ -17,6 +18,7 @@ class Scene{
         void execStart();
         void execSpeed();
         void execWloop();
+        void execDev();
         void execGarage();
 
     private:
@@ -26,6 +28,7 @@ class Scene{
             START,
             SPEED,
             WLOOP,
+            DEV,
             GARAGE,
             END
         };
@@ -33,6 +36,7 @@ class Scene{
         State mState;
         SpeedSectionManager *mSsm;
         WloopSectionManager *mWsm;
+        DevSectionManager *mDsm;
         Odometry *gOdo;
 };
 #endif

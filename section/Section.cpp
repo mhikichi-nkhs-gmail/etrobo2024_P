@@ -84,6 +84,9 @@ Judge *Section::selectJudge(int no)
         case TIME:
             mJudge = (Judge*)(new Time_judge());
             break;
+        case TURN:
+            mJudge = (Judge*)(new Turn_judge());
+            break;
         default:
             msg_log("selectJudge error!!");
    }

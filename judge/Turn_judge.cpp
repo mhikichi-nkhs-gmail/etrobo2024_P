@@ -1,5 +1,6 @@
 #include "Turn_judge.h"
 #include "Judge.h"
+#include "cmath"
 
 
 
@@ -9,7 +10,6 @@ bool Turn_judge::judge()
    
    if(turn > sturn)
     {
-        //printf("ffffffffffffff%f \n",len,"hhhhhhhhhhhhhhh%f \n",slen);
         return true;
     }
     else
