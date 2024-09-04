@@ -142,7 +142,7 @@ void SpeedSectionManager::param()
         }else if(SectionManager::course == 1){
             Walker* walker0 = sc0->selectWalker(Rdata[i].wid);
             walker0->setData(Rdata[i].param);
-            Judge* judge0 = sc0->selectJudge(Ldata[i].jid);
+            Judge* judge0 = sc0->selectJudge(Rdata[i].jid);
             judge0->setData(Rdata[i].jparam);
         }
         

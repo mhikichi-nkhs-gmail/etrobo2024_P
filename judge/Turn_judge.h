@@ -11,6 +11,8 @@ class Turn_judge : public Judge
         bool judge();
         void setTurnAngle(double setturn);
         void setData(double JudgeArray[]);
+        void reset();
+        double keep;
         double sturn;
         double turn;
 

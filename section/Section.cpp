@@ -52,6 +52,7 @@ Walker *Section::selectWalker(int no)
 {
     switch(no) {
         case WALKER:
+            printf("walker\n");
             mWalker = (Walker*)(new SimpleWalker(gOdo,gSpeed));
             break;
         case TRACER:
@@ -86,6 +87,7 @@ Judge *Section::selectJudge(int no)
             break;
         case TURN:
             mJudge = (Judge*)(new Turn_judge());
+            printf("turn\n");
             break;
         default:
             msg_log("selectJudge error!!");

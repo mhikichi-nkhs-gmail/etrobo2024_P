@@ -81,13 +81,13 @@ void Scene::execStart()
     if (ev3_button_is_pressed(ENTER_BUTTON))
     {
         printf("中央ボタン\n");
-        mSsm->param();
+        mDsm->param();
         msg_log("Press Touch Button to start.");
         int a;
         //gOdo->reset();
         a = ev3_battery_voltage_mV ();
         printf("本体バッテリー%d\n",a);
-            mState=SPEED;
+            mState=DEV;
         double b;
         double c;
 

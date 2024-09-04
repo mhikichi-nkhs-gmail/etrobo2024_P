@@ -4,9 +4,13 @@
 bool Len_judge::judge()
 {
     len = mLength->getValue();
+    double ans = len-keep;
+    //printf("ans%f\n",ans);
+    //printf("slen%f\n",slen);
+    
    if(slen>=0)
     {
-       if(len - keep > slen)
+       if(ans > slen)
        {
            return true;
        }
@@ -17,7 +21,7 @@ bool Len_judge::judge()
     }
     else
     {
-        if(len - keep < slen)
+        if(ans < slen)
        {
            return true;
        }
@@ -41,5 +45,6 @@ void Len_judge::setData(double JudgeArray[])
 
 void Len_judge::reset()
 {
-    keep = slen;
+    keep = mLength->getValue();
+    //printf("keep%f\n",keep);
 }
