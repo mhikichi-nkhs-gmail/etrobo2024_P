@@ -56,13 +56,8 @@ int SpeedControl::getPwm()
     // 直接制御なら
     //mMode_flag=true;
     if(!mMode_flag) {
-	    //ev3_speaker_play_tone(NOTE_F4,50);
+
         mForward = mTargetSpeed;
-<<<<<<< HEAD
-        
-=======
-        //printf("mForward = %d\n",mForward);
->>>>>>> f_part
         return mTargetSpeed;
     }
     //停止モード
