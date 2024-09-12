@@ -45,7 +45,7 @@ void CurveVirtual::run()
     //printf("mTurn = %lf\n",mTurn);
 
    /* static char buf[256];
-    sprintf(buf,"LT %2.3f, %d,%d",brightness,mTargetSpeed,mTurn);
+    printf(buf,"LT %2.3f, %d,%d",brightness,mTargetSpeed,mTurn);
     msg_log(buf);*/
 
     setCommandV((int)mTargetSpeed, (int)mTurn);

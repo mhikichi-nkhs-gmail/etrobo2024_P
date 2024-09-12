@@ -15,8 +15,13 @@ class Len_judge : public Judge
         void reset();
         double setLen;
         double slen;
+<<<<<<< HEAD
         double keep;
         double len;
+=======
+        double len;
+        double keep;
+>>>>>>> f_part
 
     protected:   
 
