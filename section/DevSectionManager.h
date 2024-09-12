@@ -13,15 +13,16 @@ class DevSectionManager : public SectionManager {
     protected:
 
     private:
-        INFO_DATA Ldata[14]={{Section::TRACER,{LineTracer::LEFTEDGE,40,0,8,5,8,0},Section::LENGTH,{55}}
+        INFO_DATA Ldata[15]={{Section::TRACER,{LineTracer::LEFTEDGE,40,0,10,5,5,0},Section::LENGTH,{55}}
+                        ,{Section::WALKER,{0,50},Section::TURN,{-50}}
+                        ,{Section::STRAIGHTVIRTUAL,{LineTracer::RIGHTEDGE,40,0,200,200,100,20},Section::LENGTH,{35}}
                         ,{Section::WALKER,{0,50},Section::TURN,{-35}}
-                        ,{Section::STRAIGHTVIRTUAL,{LineTracer::RIGHTEDGE,40,0,200,200,100,0},Section::LENGTH,{40}}
-                        ,{Section::WALKER,{0,50},Section::TURN,{-25}}
-                        ,{Section::TRACER,{LineTracer::LEFTEDGE,40,0,8,5,10,0},Section::LENGTH,{40}}
-                        ,{Section::WALKER,{0,-50},Section::TURN,{25}}
-                        ,{Section::STRAIGHTVIRTUAL,{LineTracer::RIGHTEDGE,40,0,200,200,100,0},Section::LENGTH,{40}}
-                        ,{Section::WALKER,{0,-50},Section::TURN,{73}}
-                        ,{Section::TRACER,{LineTracer::LEFTEDGE,40,0,10,7,10,0},Section::LENGTH,{45}}
+                        ,{Section::STRAIGHTVIRTUAL,{LineTracer::RIGHTEDGE,40,0,200,200,100,4},Section::LENGTH,{10}}
+                        ,{Section::TRACER,{LineTracer::RIGHTEDGE,40,0,8,5,10,0},Section::LENGTH,{35}}
+                        ,{Section::WALKER,{0,-50},Section::TURN,{40}}
+                        ,{Section::STRAIGHTVIRTUAL,{LineTracer::RIGHTEDGE,40,0,200,200,100,0},Section::LENGTH,{45}}
+                        ,{Section::WALKER,{0,-50},Section::TURN,{50}}
+                        ,{Section::TRACER,{LineTracer::LEFTEDGE,40,0,10,7,10,0},Section::LENGTH,{25}}
                         ,{Section::TRACER,{LineTracer::LEFTEDGE,50,0,10,7,10,0},Section::LENGTH,{35}}
                         ,{Section::WALKER,{0,50},Section::TURN,{-90}}
                         ,{Section::TRACER,{LineTracer::LEFTEDGE,0,0,8,5,8,0},Section::LENGTH,{200}}
