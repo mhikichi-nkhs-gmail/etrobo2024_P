@@ -13,7 +13,7 @@ class WloopSectionManager : public SectionManager {
     protected:
 
     private:
-        INFO_DATA Ldata[3]={{Section::TRACER,{LineTracer::LEFTEDGE,70,0,5,3,4.7,0},Section::BLUE,{180,300,0.30}}
+        INFO_DATA Ldata[3]={{Section::TRACER,{LineTracer::LEFTEDGE,100,0,8,16,8,3},Section::LENGTH,{3000}}
                         ,{Section::WALKER,{0,0},Section::LENGTH,{2000}}
                         //,{Section::TRACER,{LineTracer::RIGHTEDGE,60,0,5,3,4.5,10},Section::BLUE,{180,300,0.30}}
                         ,{Section::END}};

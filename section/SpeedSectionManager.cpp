@@ -126,7 +126,7 @@ void SpeedSectionManager::param()
         }
     }
     
-    printf("%d\n",getArrayLength);    
+    //printf("%d\n",getArrayLength);    
         
      for(int i=0;i<getArrayLength;i++){
         Section *sc0 = new Section();
