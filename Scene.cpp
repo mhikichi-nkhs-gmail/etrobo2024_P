@@ -81,13 +81,13 @@ void Scene::execStart()
     if (ev3_button_is_pressed(ENTER_BUTTON))
     {
         printf("中央ボタン\n");
-        mDsm->param();
+        mSsm->param();
         msg_log("Press Touch Button to start.");
         int a;
         //gOdo->reset();
         a = ev3_battery_voltage_mV ();
         printf("本体バッテリー%d\n",a);
-            mState=DEV;
+            mState=SPEED;
         double b;
         double c;
 
@@ -95,6 +95,8 @@ void Scene::execStart()
 }
 void Scene::execSpeed()
 {
+   //printf("aaaaaaaaaaaa\n");
+
     if(mSsm->run()) 
     {
         printf("スピード終了\n");
@@ -108,7 +110,8 @@ void Scene::execWloop()
     //青色を感知した際に実行するところ
     //printf("wloop突入！\n");
     if(mWsm->run()) {
-        printf("終了！！！\n");
+        //printf("終了！！！\n");
+        mDsm->param();
         delete mWsm;
         mState = DEV;
     }

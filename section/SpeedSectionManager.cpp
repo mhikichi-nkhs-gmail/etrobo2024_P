@@ -102,6 +102,7 @@ SpeedSectionManager::SpeedSectionManager()
 
 bool SpeedSectionManager::run()
 {
+   
     if(mSection[mSectionIdx]->run()){
         mSectionIdx++;
         //printf("mSectionIdx%d\n",mSectionIdx);

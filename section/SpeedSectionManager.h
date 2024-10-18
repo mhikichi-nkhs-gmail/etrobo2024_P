@@ -14,55 +14,23 @@ class SpeedSectionManager : public SectionManager {
 
     private:
 
-        INFO_DATA Ldata[17]={{Section::TRACER,{LineTracer::LEFTEDGE,80,0,8,10,8,3},Section::LENGTH,{290}}//80
-                    ,{Section::TRACER,{LineTracer::LEFTEDGE,60,0,5,6,4.7,25},Section::LENGTH,{20}}//60
-                    ,{Section::TRACER,{LineTracer::LEFTEDGE,80,0,8,10,8,3},Section::LENGTH,{200}}//80
-                    ,{Section::TRACER,{LineTracer::LEFTEDGE,60,0,5,6,4.7,25},Section::LENGTH,{20}}//60
-                    ,{Section::TRACER,{LineTracer::LEFTEDGE,60,0,8,16,8,3},Section::LENGTH,{110}}//60
+        INFO_DATA Ldata[6]={{Section::TRACER,{LineTracer::LEFTEDGE,95,0,8,15,8,3},Section::LENGTH,{290}}//80
+                    ,{Section::TRACER,{LineTracer::LEFTEDGE,60,0,5,6,4.7,20},Section::LENGTH,{35}}//60
+                    ,{Section::TRACER,{LineTracer::LEFTEDGE,95,0,8,15,8,3},Section::LENGTH,{180}}//80
+                    ,{Section::TRACER,{LineTracer::LEFTEDGE,60,0,5,6,4.7,20},Section::LENGTH,{30}}//60
+                    ,{Section::TRACER,{LineTracer::LEFTEDGE,70,0,8,15,8,2},Section::LENGTH,{100}}//60
                     //,{Section::TRACER,{LineTracer::LEFTEDGE,40,-0.2,8,16,8,3},Section::BLUE,{180,300,0.3}}//60青検知
                     //,{Section::STRAIGHTVIRTUAL,{LineTracer::LEFTEDGE,0,0,8,16,8,3,0},Section::LENGTH,{32}}青検知
-                    ,{Section::CURVEVIRTUAL,{45,45,5,22.5,4.7,5,-45,0},Section::LENGTH,{20}}//青検知なし
-                    ,//{Section::TRACER,{LineTracer::LEFTEDGE,60,0,5,22.5,4.7,15},Section::BLUE,{180,300,0.3}}//60青検知
-                    {Section::TRACER,{LineTracer::RIGHTEDGE,60,0,5,22.5,4.7,10},Section::LENGTH,{153}}//823 153
-                    //,{Section::STRAIGHTVIRTUAL,{LineTracer::LEFTEDGE,45,0,8,16,8,-5},Section::LENGTH,{20}}//60
-                    //,{Section::CURVEVIRTUAL,{40,10,5,22.5,4.7,5,10,0},Section::LENGTH,{10}}
-                    ,{Section::TRACER,{LineTracer::LEFTEDGE,45,0,16,32,16,-10},Section::LENGTH,{50}}
-                    ,{Section::TRACER,{LineTracer::LEFTEDGE,60,0,8,16,8,-3},Section::LENGTH,{70}}//70
-                    ,{Section::TRACER,{LineTracer::LEFTEDGE,60,0,16,32,16,-10},Section::LENGTH,{60}}//70
-                    ,{Section::TRACER,{LineTracer::LEFTEDGE,45,0,8,16,8,-3},Section::LENGTH,{100}}//70
-                    //,{Section::TRACER,{LineTracer::LEFTEDGE,60,0,16,32,16,-10},Section::LENGTH,{15}}//70
-                    //,{Section::STRAIGHTVIRTUAL,{LineTracer::LEFTEDGE,45,0,8,16,8,-5},Section::LENGTH,{0}}//60
-                    ,{Section::CURVEVIRTUAL,{45,45,5,22.5,4.7,5,-45,0},Section::LENGTH,{70}}//青検知なし
-                    //,//{Section::TRACER,{LineTracer::RIGHTEDGE,45,-2,8,16,8,3},Section::LENGTH,{90}}//60
-                    //{Section::TRACER,{LineTracer::RIGHTEDGE,45,0,16,32,16,10},Section::LENGTH,{60}}//70
-                    ,{Section::TRACER,{LineTracer::LEFTEDGE,50,0,8,16,8,3},Section::LENGTH,{100}}//70
-                    ,{Section::TRACER,{LineTracer::LEFTEDGE,0,0,8,16,8,3},Section::LENGTH,{100}}//70
                     ,{Section::END}};
 
         
-        INFO_DATA Rdata[17]={{Section::TRACER,{LineTracer::RIGHTEDGE,50,0,8,20,8,3},Section::LENGTH,{300}}//80
-                    ,{Section::TRACER,{LineTracer::RIGHTEDGE,60,0,5,6,4.7,20},Section::LENGTH,{20}}//60
-                    ,{Section::TRACER,{LineTracer::RIGHTEDGE,50,0,8,10,8,1},Section::LENGTH,{200}}//80
-                    ,{Section::TRACER,{LineTracer::RIGHTEDGE,60,0,5,6,4.7,20},Section::LENGTH,{20}}//60
-                    ,{Section::TRACER,{LineTracer::RIGHTEDGE,50,0,8,16,8,1},Section::LENGTH,{110}}//60
+        INFO_DATA Rdata[6]={{Section::TRACER,{LineTracer::RIGHTEDGE,95,0,24,60,12,0},Section::LENGTH,{290}}//80
+                    ,{Section::TRACER,{LineTracer::RIGHTEDGE,70,0,5,6,4.7,-15},Section::LENGTH,{25}}//60
+                    ,{Section::TRACER,{LineTracer::RIGHTEDGE,100,0,24,60,12,0},Section::LENGTH,{190}}//80
+                    ,{Section::TRACER,{LineTracer::RIGHTEDGE,70,0,5,6,4.7,-15},Section::LENGTH,{30}}//60
+                    ,{Section::TRACER,{LineTracer::RIGHTEDGE,95,0,16,40,8,0},Section::LENGTH,{100}}//60
                     //,{Section::TRACER,{LineTracer::LEFTEDGE,40,-0.2,8,16,8,3},Section::BLUE,{180,300,0.3}}//60青検知
                     //,{Section::STRAIGHTVIRTUAL,{LineTracer::LEFTEDGE,0,0,8,16,8,3,0},Section::LENGTH,{32}}青検知
-                    ,{Section::CURVEVIRTUAL,{45,45,5,22.5,4.7,5,45,3},Section::LENGTH,{20}}//青検知なし
-                    ,//{Section::TRACER,{LineTracer::LEFTEDGE,60,0,5,22.5,4.7,15},Section::BLUE,{180,300,0.3}}//60青検知
-                    {Section::TRACER,{LineTracer::LEFTEDGE,60,0,5,22.5,4.7,-7},Section::LENGTH,{153}}//823 153
-                    //,{Section::STRAIGHTVIRTUAL,{LineTracer::LEFTEDGE,45,0,8,16,8,-5},Section::LENGTH,{20}}//60
-                    //,{Section::CURVEVIRTUAL,{40,10,5,22.5,4.7,5,10,0},Section::LENGTH,{10}}
-                    ,{Section::TRACER,{LineTracer::RIGHTEDGE,45,0,16,32,16,-7},Section::LENGTH,{50}}
-                    ,{Section::TRACER,{LineTracer::RIGHTEDGE,60,0,8,16,8,-3},Section::LENGTH,{70}}//70
-                    ,{Section::TRACER,{LineTracer::RIGHTEDGE,60,0,16,32,16,-7},Section::LENGTH,{60}}//70
-                    ,{Section::TRACER,{LineTracer::RIGHTEDGE,45,0,8,16,8,-3},Section::LENGTH,{100}}//70
-                    //,{Section::TRACER,{LineTracer::LEFTEDGE,60,0,16,32,16,-10},Section::LENGTH,{15}}//70
-                    //,{Section::STRAIGHTVIRTUAL,{LineTracer::LEFTEDGE,45,0,8,16,8,-5},Section::LENGTH,{0}}//60
-                    ,{Section::CURVEVIRTUAL,{45,45,5,22.5,4.7,5,-45,3},Section::LENGTH,{70}}//青検知なし
-                    //,//{Section::TRACER,{LineTracer::RIGHTEDGE,45,-2,8,16,8,3},Section::LENGTH,{90}}//60
-                    //{Section::TRACER,{LineTracer::RIGHTEDGE,45,0,16,32,16,10},Section::LENGTH,{60}}//70
-                    ,{Section::TRACER,{LineTracer::RIGHTEDGE,50,0,8,16,8,3},Section::LENGTH,{100}}//70
-                    ,{Section::TRACER,{LineTracer::RIGHTEDGE,0,0,8,16,8,3},Section::LENGTH,{100}}//70
                     ,{Section::END}};
 
 

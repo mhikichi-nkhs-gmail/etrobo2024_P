@@ -13,16 +13,40 @@ class WloopSectionManager : public SectionManager {
     protected:
 
     private:
-        INFO_DATA Ldata[3]={{Section::TRACER,{LineTracer::LEFTEDGE,100,0,8,16,8,3},Section::LENGTH,{3000}}
-                        ,{Section::WALKER,{0,0},Section::LENGTH,{2000}}
-                        //,{Section::TRACER,{LineTracer::RIGHTEDGE,60,0,5,3,4.5,10},Section::BLUE,{180,300,0.30}}
-                        ,{Section::END}};
+        INFO_DATA Ldata[9]={{Section::CURVEVIRTUAL,{70,45,5,22.5,4.7,5,-45,0},Section::LENGTH,{20}}//青検知なし
+                    ,//{Section::TRACER,{LineTracer::LEFTEDGE,60,0,5,22.5,4.7,15},Section::BLUE,{180,300,0.3}}//60青検知
+                    {Section::TRACER,{LineTracer::RIGHTEDGE,50,0,5,40,4.7,10},Section::LENGTH,{153}}//823 153
+                    //,{Section::STRAIGHTVIRTUAL,{LineTracer::LEFTEDGE,45,0,8,16,8,-5},Section::LENGTH,{20}}//60
+                    //,{Section::CURVEVIRTUAL,{40,10,5,22.5,4.7,5,10,0},Section::LENGTH,{10}}
+                    ,{Section::TRACER,{LineTracer::LEFTEDGE,45,0,16,32,16,-10},Section::LENGTH,{50}}
+                    ,{Section::TRACER,{LineTracer::LEFTEDGE,50,0,8,16,8,-3},Section::LENGTH,{70}}//70
+                    ,{Section::TRACER,{LineTracer::LEFTEDGE,50,0,16,32,16,-10},Section::LENGTH,{60}}//70
+                    ,{Section::TRACER,{LineTracer::LEFTEDGE,45,0,8,16,8,-3},Section::LENGTH,{95}}//70
+                    //,{Section::TRACER,{LineTracer::LEFTEDGE,60,0,16,32,16,-10},Section::LENGTH,{15}}//70
+                    //,{Section::STRAIGHTVIRTUAL,{LineTracer::LEFTEDGE,45,0,8,16,8,-5},Section::LENGTH,{0}}//60
+                    ,{Section::CURVEVIRTUAL,{40,35,5,22.5,4.7,5,-45,0},Section::LENGTH,{30}}//青検知なし
+                    //,//{Section::TRACER,{LineTracer::RIGHTEDGE,45,-2,8,16,8,3},Section::LENGTH,{90}}//60
+                    //{Section::TRACER,{LineTracer::RIGHTEDGE,45,0,16,32,16,10},Section::LENGTH,{60}}//70
+                    ,{Section::TRACER,{LineTracer::LEFTEDGE,50,0,16,32,16,6},Section::LENGTH,{90}}//70
+                    
+                    ,{Section::END}};
 
-        INFO_DATA Rdata[6]={{Section::TRACER,{LineTracer::RIGHTEDGE,100,0,10,5,3},Section::LENGTH,{270}}
-                    ,{Section::TRACER,{LineTracer::RIGHTEDGE,60,0,50,80,60},Section::LENGTH,{305}}
-                    ,{Section::TRACER,{LineTracer::RIGHTEDGE,100,0,10,5,3},Section::LENGTH,{475}}
-                    ,{Section::TRACER,{LineTracer::RIGHTEDGE,60,0,50,80,60},Section::LENGTH,{505}}
-                    ,{Section::TRACER,{LineTracer::RIGHTEDGE,100,0,10,5,3},Section::LENGTH,{550}}
+        INFO_DATA Rdata[9]={{Section::CURVEVIRTUAL,{45,45,5,22.5,4.7,5,45,3},Section::LENGTH,{20}}//青検知なし
+                    ,//{Section::TRACER,{LineTracer::LEFTEDGE,60,0,5,22.5,4.7,15},Section::BLUE,{180,300,0.3}}//60青検知
+                    {Section::TRACER,{LineTracer::LEFTEDGE,60,0,5,22.5,4.7,-7},Section::LENGTH,{153}}//823 153
+                    //,{Section::STRAIGHTVIRTUAL,{LineTracer::LEFTEDGE,45,0,8,16,8,-5},Section::LENGTH,{20}}//60
+                    //,{Section::CURVEVIRTUAL,{40,10,5,22.5,4.7,5,10,0},Section::LENGTH,{10}}
+                    ,{Section::TRACER,{LineTracer::RIGHTEDGE,50,0,16,32,16,8},Section::LENGTH,{50}}
+                    ,{Section::TRACER,{LineTracer::RIGHTEDGE,60,0,8,16,8,12},Section::LENGTH,{50}}//70
+                    ,{Section::TRACER,{LineTracer::RIGHTEDGE,70,0,16,64,32,8},Section::LENGTH,{80}}//70
+                    ,{Section::TRACER,{LineTracer::RIGHTEDGE,50,0,12,24,12,8},Section::LENGTH,{190}}//70
+                    //,{Section::TRACER,{LineTracer::LEFTEDGE,60,0,16,32,16,-10},Section::LENGTH,{15}}//70
+                    //,{Section::STRAIGHTVIRTUAL,{LineTracer::LEFTEDGE,45,0,8,16,8,-5},Section::LENGTH,{0}}//60
+                    ,{Section::CURVEVIRTUAL,{45,45,5,22.5,4.7,5,45,6},Section::LENGTH,{30}}//青検知なし
+                    //,//{Section::TRACER,{LineTracer::RIGHTEDGE,45,-2,8,16,8,3},Section::LENGTH,{90}}//60
+                    //{Section::TRACER,{LineTracer::RIGHTEDGE,45,0,16,32,16,10},Section::LENGTH,{60}}//70
+                    ,{Section::TRACER,{LineTracer::RIGHTEDGE,50,0,24,60,12,0},Section::LENGTH,{120}}//70
+                    
                     ,{Section::END}};
 
 };
